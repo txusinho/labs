@@ -1,0 +1,6 @@
+Txus' notes
+===========
+
+- Currently, I'm trying to use requireJS with Jasmine.
+- RequireJs uses an internal cache, that's why, I've set up an special parameter on SpecRunner.html
+ - Next step is tohave a this simple example working with tests. The requireJs imports is loaded correctly.
