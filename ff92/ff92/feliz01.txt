@@ -1,0 +1,5 @@
+<nombrepnj> <cl>
+Con sal o sin ella, todos hemos de <cl>
+ser felices. <wait>
+<nombrep> <cl>
+Como? <wait> <end>

@@ -1,0 +1,19 @@
+<nombrepnj> <cl>
+Oh! <nombrep> , gracias a Dios que <cl>
+has venido!. <wait>
+<nombrepnj> <cl>
+El pueblo esta lleno de desconocidos <cl>
+que pegan a las viejecitas y roban los <cl>
+caramelos a los ni¤os. <wait>
+<nombrep> <cl>
+Y a mi que me importa, <nombrepnj> . <wait>
+<nombrepnj> <cl>
+Ademas ha desaparecido Mariluz, la <cl>
+mayor proveedora de sal de la zona. <cl>
+Si no la encuentras las comidas <cl>
+estaran sosas! <wait>
+<nombrep> <cl>
+Como! No puedo permitirlo! <cl>
+A mi me gusta la comida salada! <cl>
+El culpable pagara por esto! <wait> <end>
+

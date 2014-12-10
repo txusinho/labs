@@ -1,0 +1,8 @@
+<nombrepnj> <cl>
+Tal vez lo que encontre ayer te <cl>
+pueda servir para algo, <nombrep> . <wait>
+<nombrep> <cl>
+Ah, si? Y para que? <wait>
+<nombrepnj> <cl>
+Buscaaahhhh en el templooohh de la <cl>
+sabiduriaaaaahhh... <wait> <end>

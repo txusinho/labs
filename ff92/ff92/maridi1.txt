@@ -1,0 +1,15 @@
+<nombrepnj> <cl>
+Oh!, gracias a Dios que habeis <cl>
+venido! <wait>
+<nombrep> <cl>
+(Cielos, creo que he sufrido un <cl>
+deja-vu). <cl>
+Esto..., si, si, menos mal, hala <cl>
+mejor nos largamos de aqui... <wait>
+<nombrepnj> <cl>
+Pero que dices! Ahora es cuando <cl>
+te enfrentas al super-villano y <cl>
+salvas a la humanidad! <wait>
+<nombrep> <cl>
+Mierda, porque me imaginaba que <cl>
+ibas a decir eso... <wait> <end>

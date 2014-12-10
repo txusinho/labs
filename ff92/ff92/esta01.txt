@@ -1,0 +1,16 @@
+<nombrepnj> <cl>
+Bueno, basta ya de mariconeo de <cl>
+pantalla. Un informatico que se <cl>
+precie tiene que saber hacer <cl>
+calculo estadistico. <cl>
+Sino cuando os digan a ver si <cl>
+sabeis usar el SPSS, que es lo <cl>
+que les vais a decir, eh? <wait>
+<nombrep> <cl>
+Bueno yo... <wait>
+<nombrepnj> <cl>
+Mariconeo de pantalla, eso es lo <cl>
+unico que os gusta hacer. <cl>
+Que les pregunten a los de la UPV, <cl>
+a ver si hacen estadistica o mariconeo <cl>
+de pantalla, joder. <wait> <end>

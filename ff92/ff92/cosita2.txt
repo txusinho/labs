@@ -1,0 +1,3 @@
+<nombrepnj> <cl>
+Jo, dejame en paz. <wait>
+<end>

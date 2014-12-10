@@ -1,0 +1,37 @@
+LAS MUSICAS QUE APARECEN EN EL JUEGO <cl>
+son: <wait> 3000
+Pantalla 1: <cl>
+Juego: <cl>
+..A Past and Future Secret, Blind Guardian <cl>
+Combates: <cl>
+..Ken's Scenary, Street Fighter II <cl>
+Malo Final: <cl>
+..Stargazers, Nightwish <wait> 6000
+Pantalla 2: <cl>
+Juego: <cl>
+..600 a.d. forest, Chrono Trigger <cl>
+Combates: <cl>
+..Combat, Chono Trigger <cl>
+Malo Final: <cl>
+..Boss Music, Chrono Trigger <wait> 6000
+Pantalla 3: <cl>
+Juego: <cl>
+..Under Sea Palace, Chrono Trigger <cl>
+Combates: <cl>
+..SOS, Stratovarius <cl>
+Malo Final: <cl>
+..Nothing to Say, Angra <wait> 6000
+Pantalla 4: <cl>
+Juego: <cl>
+..Chrono Trigger Legend, Chrono Trigger <cl>
+Sephirot: <cl>
+..Sephirot Theme, Final Fantasy 7 <wait> 6000
+Introduccion: <cl>
+..Frog Theme, Chrono Trigger <cl>
+..Battle Win, Final Fantasy 7 <cl>
+..Sephirot Theme, Final Fantasy 7 <cl>
+Final: <cl>
+..Costa del Sol, Final Fantasy 7 <cl>
+Creditos: <cl>
+..Chrono Trigger End <wait> 6500
+<end>

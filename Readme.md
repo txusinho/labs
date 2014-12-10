@@ -8,6 +8,7 @@ Current projects
 ================
 - ES6 -> some minor tests using the traceur compiler for ES6. Future is here, dudes!
 - requireJS -> requireJS + angular are good friends, or not?
+- ff92 -> One of my first projects. Originally programmed in C and compiled with DJGPP and allegro. For windows. Needs a huge rewrite.
 
 License
 =======

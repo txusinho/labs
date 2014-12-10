@@ -1,0 +1,113 @@
+001
+Pocion_S
+1
+pociona.bmp
+0 0 0 20 0
+
+002
+Llave
+2
+llavea.bmp
+0 0 0 0 0
+
+003
+Mesa
+0
+mesa.bmp
+0 0 0 0 0
+
+004
+Pocion_Secreta
+1
+pocionr.bmp
+0 0 0 -5 0
+
+005
+Pocion_Attr
+1
+pocionv.bmp
+1 1 1 1 1
+
+006
+fuente
+0
+fuente.bmp
+0 0 0 0 0
+
+007
+cama
+0
+cama.bmp
+0 0 0 0 0
+
+008
+SPSS
+2
+llavea.bmp
+0 0 0 0 0
+
+009
+Arbolito
+0
+arbol.bmp
+0 0 0 0 0
+
+010
+Cabeza_YP
+0
+cabeyo.bmp
+0 0 0 0 0
+
+011
+Bandurria_Venus
+2
+banduve.bmp
+0 0 0 0 0
+
+012
+Pocion_Attr2
+1
+pocionv.bmp
+2 2 2 2 2
+
+013
+Piedra_Angular
+2
+llavea.bmp
+0 0 0 0 0
+
+014
+Pocion_X
+1
+pociona.bmp
+0 0 0 40 0
+
+015
+Armadura
+1
+armadura.bmp
+0 15 0 0 0
+
+016
+Espada
+1
+cuchillo.bmp
+15 0 0 0 0
+
+017
+Pocion_Secreta
+1
+pocionr.bmp
+0 0 0 30 30
+
+018
+Impaled
+0
+impaled.bmp
+0 0 0 0 0
+
+019
+Llave_final
+2
+llavea.bmp
+0 0 0 0 0

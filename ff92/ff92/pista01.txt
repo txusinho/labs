@@ -1,0 +1,4 @@
+<nombrepnj> <cl>
+Todo lo que te puedo decir es <cl>
+que ayer en el bar encontraron <cl>
+algo. <wait> <end>

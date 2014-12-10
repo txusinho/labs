@@ -1,0 +1,8 @@
+- Rename everything to english
+- Rename araña to arana -> Search for special characters on source code
+- mv assets to proper place
+- Documentation in proper formats, please
+- FLI are animation propietary formats from autodesk. Should move to something more like 21st century.
+- Compile using allegro. Good luck.
+
+

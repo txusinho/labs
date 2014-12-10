@@ -1,0 +1,7 @@
+<nombrepnj> <cl>
+Bueno, pues salvad el mundo con <cl>
+esto, y que no se diga. <cl>
+VIVA EL SPSS! <cl>
+ABAJO EL MARICONEO DE PANTALLA! <wait>
+<nombrep> <cl>
+Esto... si, si, claro, claro... <wait> <end>

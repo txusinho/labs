@@ -1,0 +1,8 @@
+<nombrepnj> <cl>
+Pero vamos! A que esperas! <wait>
+<nombrep> <cl>
+Claro, como a ti no te va a <cl>
+dar pa'l pelo! <wait>
+<nombrepnj> <cl>
+Bueno, tal vez tenga algo para ayudarte <cl>
+en tu gesta (jo que bien queda) <wait> <end>

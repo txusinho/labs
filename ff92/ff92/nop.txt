@@ -1,0 +1,7 @@
+<nombrepnj> <cl>
+CASTILLO SECRETO DEL MALO, NO PASAR <cl>
+<cl>
+Firmado: <cl>
+El Malo <wait>
+<nombrep> <cl>
+Muy ocurrente... <wait> <end>

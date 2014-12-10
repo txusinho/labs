@@ -1,0 +1,7 @@
+<nombrep> <cl>
+<nombrepnj> , <nombrepnj> , donde vas <cl>
+con esa cestita? <wait>
+<nombrep> <cl>
+Bruuuap (eructo), dame algo de <cl>
+tu cestita. <cl>
+O dame tu cuerpo. <wait> <end>

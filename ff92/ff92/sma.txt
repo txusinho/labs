@@ -1,0 +1,4 @@
+<nombrepnj> <cl>
+SAPIENTIA MELIOR AURO <wait>
+<nombrep> <cl>
+Donde he oido yo eso antes? <wait> <end>

@@ -1,0 +1,5 @@
+<nombrep> <cl>
+Sabes algo mas? <wait>
+<nombrepnj> <cl>
+No, <nombrep> . Pero creo que deberias <cl>
+ir al centro de saber de este pueblo. <wait> <end>

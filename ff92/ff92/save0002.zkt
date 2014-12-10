@@ -1,0 +1,364 @@
+02
+El_Pueblo
+caminoad.bmp
+72 72 0 0 0 0 0 0 72 72 72 72
+0 0 0 0
+0 0 0 0
+0 6 3 0
+Cartel
+30 30
+car
+burla.txt
+burla.txt
+0
+0
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 1 3
+
+06
+El_Pueblo
+caminot.bmp
+0 72 0 0 0 0 0 0 0 0 0 72
+23 0 0 0
+0 0 0 0
+5 10 7 2
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 3 1
+
+05
+Una_casa
+fmadera.bmp
+72 72 72 72 72 72 0 72 72 72 72 72
+0 0 0 0
+0 0 0 0
+0 0 6 0
+Caperucita
+300 50
+cap
+aviso01.txt
+aviso02.txt
+1
+0
+5 3 0 0 0
+50 50 250 190 0 0 0 0 0 0
+NO
+
+010
+El_Pueblo
+caminida.bmp
+72 72 72 0 72 0 0 0 0 0 0 72
+0 23 0 0
+0 0 0 0
+0 13 11 6
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 3 1
+
+013
+La_Posada
+fmadera.bmp
+72 72 72 72 72 72 72 72 72 0 72 72
+0 0 0 0
+0 0 0 0
+0 0 0 10
+Posadera
+500 100
+cap
+pista01.txt
+aviso02.txt
+0
+0
+5 7 7 7 7
+50 50 150 40 250 40 350 40 450 40
+NO
+
+011
+El_Pueblo
+caminot.bmp
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0
+10 14 12 7
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 3 1
+
+014
+El_Pueblo
+caminoid.bmp
+72 72 0 0 0 72 72 72 0 0 0 72
+0 0 0 0
+0 0 0 0
+0 16 0 11
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 3 1 3 1
+
+016
+El_Pueblo
+caminoid.bmp
+23 23 32 0 32 23 23 23 0 0 0 23
+0 72 0 0
+0 2 0 0
+0 19 0 14
+Cartel
+30 30
+car
+sma.txt
+sma.txt
+0
+0
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 1 3
+
+019
+La_Universidad
+fmadera.bmp
+0 0 72 0 72 0 0 0 72 0 72 0
+0 23 0 0
+0 8 0 0
+18 999 21 16
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+unic.bmp
+1 1 1 1 1
+
+018
+La_Universidad
+fmadera.bmp
+0 0 72 0 72 0 0 0 72 72 72 0
+0 23 0 0
+0 0 0 0
+17 24 19 0
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+unic.bmp
+1 1 1 1 1
+
+017
+La_Universidad
+fmadera.bmp
+72 72 72 0 72 0 0 0 72 72 72 72
+0 23 0 0
+0 0 0 0
+0 23 18 0
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+unic.bmp
+1 1 1 1 1
+
+023
+Aula_313
+fmadera.bmp
+72 72 72 72 72 72 72 72 72 0 72 72
+0 0 0 0
+0 0 0 0
+0 0 0 17
+Eguiluz
+50 70
+egu
+feliz01.txt
+feliz02.txt
+5
+0
+3 3 0 0 0
+250 190 400 190 0 0 0 0 0 0
+NO
+
+024
+Aula_304
+fmadera.bmp
+72 72 72 72 72 72 72 72 72 0 72 72
+0 0 0 0
+0 0 0 0
+0 0 0 18
+Simeon
+80 80
+sim
+esta01.txt
+esta02.txt
+8
+0
+3 3 0 0 0
+250 190 400 190 0 0 0 0 0 0
+NO
+
+0999
+Salida
+fmadera.bmp
+72 72 72 72 72 72 72 72 72 0 72 72
+0 0 0 0
+0 0 0 0
+0 0 0 19
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+NO
+
+021
+La_Universidad
+fmadera2.bmp
+0 0 72 0 72 72 0 72 72 72 72 0
+0 23 72 0
+0 0 0 0
+19 27 22 0
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+unic.bmp
+1 1 1 1 1
+
+027
+Aula_305
+fmadera.bmp
+72 72 72 72 72 72 72 72 72 0 72 72
+0 0 0 0
+0 0 0 0
+0 0 0 21
+NO
+3 3 0 0 0
+250 190 400 190 0 0 0 0 0 0
+NO
+
+022
+Sala_Secreta
+cueva01.bmp
+0 72 72 72 72 72 72 72 72 72 72 72
+0 0 0 0
+0 0 0 0
+21 0 0 0
+NO
+1 4 5 5 0
+30 30 30 100 30 170 30 240 0 0
+fondoci.bmp
+2 2 2 2 2
+
+012
+El_Pueblo
+caminidr.bmp
+0 0 72 0 72 72 72 72 0 0 0 0
+0 23 0 0
+0 0 0 0
+11 15 0 8
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 3 1
+
+015
+El_Bar
+fmadera.bmp
+72 72 72 72 72 72 72 72 72 0 72 72
+0 0 0 0
+0 0 0 0
+0 0 0 12
+Tabernero
+400 100
+hun
+aviso01.txt
+pista02.txt
+2
+0
+5 3 3 1 1
+50 50 250 190 400 190 100 50 150 50
+NO
+
+08
+El_Pueblo
+caminot.bmp
+0 0 0 0 0 72 0 72 0 0 0 0
+0 0 23 0
+0 0 0 0
+7 12 9 4
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 3 1
+
+07
+La_plaza
+plaza.bmp
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0
+6 11 8 3
+NO
+6 0 0 0 0
+200 100 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 3 1 3 1
+
+03
+El_Pueblo
+caminot.bmp
+0 0 0 0 0 0 0 0 72 0 72 0
+0 0 0 0
+0 0 0 0
+2 7 4 1
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 3 1
+
+04
+El_Pueblo
+caminori.bmp
+0 0 0 0 0 72 72 72 72 72 72 0
+0 0 0 0
+0 0 0 0
+3 8 0 0
+NO
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+puebloc.bmp
+1 1 1 3 1
+
+01
+Casa_Del_Player
+fmadera.bmp
+72 72 72 0 72 72 72 72 72 72 72 72
+0 0 0 0
+0 0 0 0
+0 3 0 0
+NO
+3 0 0 0 0
+250 190 0 0 0 0 0 0 0 0
+NO
+
+09
+Una_casa
+fmadera.bmp
+0 72 72 72 72 72 72 72 72 72 72 72
+0 0 0 0
+0 0 0 0
+8 0 0 0
+Hunter
+100 250
+hun
+aviso01.txt
+aviso02.txt
+0
+0
+0 3 0 0 0
+0 0 250 190 0 0 0 0 0 0
+NO
+

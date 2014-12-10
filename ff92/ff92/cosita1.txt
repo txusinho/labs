@@ -1,0 +1,6 @@
+<nombrepnj> <cl>
+Oh! <nombrep> que bueno estas, <cl>
+te quiero matar. <wait>
+<nombrep> <cl>
+Yo te mato mas. <wait>
+<end>
