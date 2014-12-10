@@ -1,11 +1,11 @@
 /************************************************************************
 
-M¢dulo principal
+Modulo principal
 
 *************************************************************************/
 
 
-#include "allegro.h"           // M¢dulos y librer¡as
+#include "allegro.h"           // Modulos y librerias
 #include "List.h"
 #include "TadSala.h"
 #include "TadObjet.h"
@@ -21,14 +21,14 @@ M¢dulo principal
 #include <string.h>
 #include <stdio.h>
 
-#define alleg_mouse_unused     // Esto s¢lo acelera el tiempo de
-#define alleg_joystick_unused  // compilaci¢n.
+#define alleg_mouse_unused     // Esto solo acelera el tiempo de
+#define alleg_joystick_unused  // compilacion.
 #define alleg_file_unused      //
 #define alleg_datafile_unused  //
 #define alleg_math_unused      //
 #define alleg_gui_unused       //
 
-#define NUMPANTALLAS 4    // constante del n£mero de pantallas
+#define NUMPANTALLAS 4    // constante del numero de pantallas
 
 
 
@@ -37,18 +37,18 @@ M¢dulo principal
         Nombre: InicializaTodo
         Tipo: void
         Par metros de entrada: ninguno
-        Descripci¢n: Inicializa Allegro, y las rutinas necesarias
+        Descripcion: Inicializa Allegro, y las rutinas necesarias
                      para procesar ciertos archivos.
 ************************************************************/
 
 void InicializaTodo()
 {
- allegro_init(); //rutina de inicializaci¢n de alegro
+ allegro_init(); //rutina de inicializacion de alegro
  install_timer(); //necesario para archivos midi y fli/flc
  install_keyboard(); //para utilizar el teclado
  fade_out (1);
  install_sound(DIGI_AUTODETECT,MIDI_AUTODETECT,NULL); // controlador de sonido
- srand(time(0)); // Generador de n£meros aleatorios
+ srand(time(0)); // Generador de numeros aleatorios
  return;
 }
 
@@ -59,8 +59,8 @@ void InicializaTodo()
         Nombre: SeleccionPers
         Tipo: TPERSONAJE. Devuelve el personaje elegido.
         Par metros de entrada: ninguno
-        Descripci¢n: muestra dos im genes de los personajes en pantalla
-                     y permite escoger uno con las teclas de direcci¢n.
+        Descripcion: muestra dos imagenes de los personajes en pantalla
+                     y permite escoger uno con las teclas de direccion.
 ************************************************************/
 
 TPERSONAJE SeleccionPers ()
@@ -74,16 +74,16 @@ TPERSONAJE SeleccionPers ()
  text_mode (0);
  clear_keybuf();
  bardok = load_bitmap ("bdks0000.bmp",pal); //
- txus = load_bitmap ("txss0000.bmp",pal);   // Cargamos las im genes
+ txus = load_bitmap ("txss0000.bmp",pal);   // Cargamos las imagenes
  set_palette (pal);                         //
  j = 1;
  clear (screen);
  textprintf (screen,font,200,50,10,"Selecciona tu personaje.");
  draw_sprite (screen,bardok,400,100); //
- draw_sprite (screen,txus,60,100);    // Sacamos las im genes por pantalla
+ draw_sprite (screen,txus,60,100);    // Sacamos las imagenes por pantalla
  while (!key[KEY_ENTER])
  { // mientras no pulsemos ENTER...
-  string = (j==1)?"Bardok":"Txus  "; // el nombre depende de la posici¢n
+  string = (j==1)?"Bardok":"Txus  "; // el nombre depende de la posicion
   textprintf (screen,font,(j==1)?400:60,110+bardok->h,215,"%s",string);
   textprintf (screen,font,(j==1)?60:400,110+bardok->h,215,"      ");
              // Escribimos el nombre bajo el que est  seleccionado,
@@ -102,10 +102,10 @@ TPERSONAJE SeleccionPers ()
  strcpy (temp.nombre,string);         //
  if (j == 1) strcpy (temp.fot,"bdk"); // Configuramos el personaje
  else strcpy (temp.fot,"txs");        //
- for (i=0;i<20;i++)           //colocamos los c¢digos de objetos a 0
+ for (i=0;i<20;i++)           //colocamos los codigos de objetos a 0
      temp.objetos[i] = 0;     //para que no lleve ninguno
  for (i=0;i<5;i++)
-     temp.carac[i] = 10;       //definimos las caracter¡sticas de complexi¢n del
+     temp.carac[i] = 10;       //definimos las caracteristicas de complexion del
  temp.exp = 2000;                //personaje
  temp.nivel = 3;
 
@@ -122,16 +122,16 @@ TPERSONAJE SeleccionPers ()
 
         Nombre: SeleccionaMusicas
         Tipo: void
-        Par metros de entrada: i, entero que representa el n£mero de la
+        Par metros de entrada: i, entero que representa el numero de la
                    pantalla. MusicG y MusicC, strings para guardar el
-                   nombre de los ficheros de m£sica.
-        Descripci¢n: Devuelve los nombres de los ficheros de m£sica seg£n
-                     cu l sea el n£mero de pantalla.
+                   nombre de los ficheros de musica.
+        Descripcion: Devuelve los nombres de los ficheros de musica segun
+                     cu l sea el numero de pantalla.
 ************************************************************/
 
 void SeleccionaMusicas (int i,char musicG[13], char musicC[13])
 {
- switch (i) // Elegimos seg£n la pantalla
+ switch (i) // Elegimos segun la pantalla
  {
   case (1): strcpy (musicG,"scr001.mid");
             strcpy (musicC,"scrc001.mid");
@@ -156,10 +156,10 @@ void SeleccionaMusicas (int i,char musicG[13], char musicC[13])
         Nombre: SeleccionPantallaInic
         Tipo: TLISTACUAD, devuelve una pantalla
         Par metros de entrada: musicGame, musicCombat, strings para
-                   guardar los nombres de los ficheros de m£sica.
+                   guardar los nombres de los ficheros de musica.
                    x, y, apuntadores a entero. En ellos se devolver n las
                    coordenadas iniciales.
-        Descripci¢n: Configura los par metros de la primera pantalla, y
+        Descripcion: Configura los par metros de la primera pantalla, y
                      la devuelve.
 ************************************************************/
 
@@ -182,7 +182,7 @@ TLISTACUAD SeleccionPantallaInic (char musicGame[13], char musicCombat[13],
         Tipo: TLISTACUAD, devuelve la pantalla cargada.
         Par metros de entrada: player, apuntador a personaje. musicG y
                    musicC, strigns. i, x, y, apuntadores a entero.
-        Descripci¢n: Devuelve en player musicG, musicC, x e y los par metros
+        Descripcion: Devuelve en player musicG, musicC, x e y los par metros
                      necesarios para jugar en una partida guardada.
                      El valor de vuelta es la entrada a la pantalla grabada.
 ************************************************************/
@@ -191,7 +191,7 @@ TLISTACUAD SeleccionACargar (TPERSONAJE *player,int *i,char musicG[13],
                              char musicC[13],int *x, int *y)
 {
  BITMAP *doublebuffer;
- int k,j=0; // k: contador de bucle. j: selecci¢n actual
+ int k,j=0; // k: contador de bucle. j: seleccion actual
  INFO temp[15];
 
  text_mode (-1);
@@ -209,13 +209,13 @@ TLISTACUAD SeleccionACargar (TPERSONAJE *player,int *i,char musicG[13],
   { // Si se pulsa arriba
    j--;                // movemos
    clear_keybuf();
-   j = (j==-1)?0:j;    // vigilamos el l¡mite superior
+   j = (j==-1)?0:j;    // vigilamos el limite superior
   }
   else if (key[KEY_DOWN])
   { // Si se pulsa abajo
    j++;               // movemos
    clear_keybuf();
-   j = (j==15)?14:j;  // vigilamos el l¡mite inferior
+   j = (j==15)?14:j;  // vigilamos el limite inferior
   }
  } // FIN while
  if (key[KEY_ENTER])
@@ -246,16 +246,16 @@ TLISTACUAD SeleccionACargar (TPERSONAJE *player,int *i,char musicG[13],
         Nombre: GuardaPartida
         Tipo: void
         Par metros de entrada: player, el personaje. pantalla, la pantalla
-                   actual. i, n£mero de pantalla. x e y, coordenadas del
+                   actual. i, numero de pantalla. x e y, coordenadas del
                    jugador.
-        Descripci¢n: Seleccionamos el slot en que guardar, y grabamos en ‚l
+        Descripcion: Seleccionamos el slot en que guardar, y grabamos en ‚l
                      la partida.
 ************************************************************/
 
 void GuardaPartida (TPERSONAJE player, TLISTACUAD pantalla,int i,int x,int y)
 {
  BITMAP *doublebuffer;
- int k,j=0; // k: contador de bucle. j: selecci¢n actual
+ int k,j=0; // k: contador de bucle. j: seleccion actual
  INFO temp[15];
 
  text_mode (-1);
@@ -267,19 +267,19 @@ void GuardaPartida (TPERSONAJE player, TLISTACUAD pantalla,int i,int x,int y)
  while (!key[KEY_ENTER] && !key[KEY_ESC])
  { // Mientras no pulsemos enter o escape
   for (k=0;k<=14;k++)
-      DibujaSlots (doublebuffer,k,j,temp); // Mostramos los slots de grabaci¢n
+      DibujaSlots (doublebuffer,k,j,temp); // Mostramos los slots de grabacion
   blit (doublebuffer,screen,0,0,0,0,640,480);
   if (key[KEY_UP])
   { // si pulsamos arriba
    j--;               // seleccinamos la superior
    clear_keybuf();
-   j = (j==-1)?0:j;   // y vigilamos los l¡mites
+   j = (j==-1)?0:j;   // y vigilamos los limites
   }
   else if (key[KEY_DOWN])
   { // si pulsamos abajo
    j++;               // seleccionamos la inferior
    clear_keybuf();
-   j = (j==15)?14:j;  // y vigilamos los l¡mites
+   j = (j==15)?14:j;  // y vigilamos los limites
   }
  } // FIN while
  if (key[KEY_ENTER])
@@ -303,19 +303,19 @@ void GuardaPartida (TPERSONAJE player, TLISTACUAD pantalla,int i,int x,int y)
 
         Nombre: CargaPantallaI
         Tipo: TLISTACUAD
-        Par metros de entrada: codigo, el n£mero de pantalla a cargar.
+        Par metros de entrada: codigo, el numero de pantalla a cargar.
                    musicGame, musicCombat, x, y: par metros para la nueva
                    pantalla. player: aputador al personaje.
-        Descripci¢n:
+        Descripcion:
 ************************************************************/
 
 TLISTACUAD CargaPantallaI (int codigo, char musicGame[13], char musicCombat[13],
                            int *x, int *y,TPERSONAJE *player)
 {
  int i;   // contador de bucle
- int (*callBack)();   // apuntador a funci¢n que devuelve entero para play_fli
+ int (*callBack)();   // apuntador a funcion que devuelve entero para play_fli
 
- set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo gr fico
+ set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo grafico
  clear_keybuf();
  player->nivel++;            // Subimos el nivel del personaje
  *x = 305;                   //
@@ -328,23 +328,23 @@ TLISTACUAD CargaPantallaI (int codigo, char musicGame[13], char musicCombat[13],
             player->carac[3] = player->carac[4];     //
             callBack = StopChocobo;
             play_fli ("chocobo.fli",screen,FALSE,callBack);//video entre fase
-            set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo gr fico
+            set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo grafico
             strcpy (musicGame, "scr002.mid");      //
-            strcpy (musicCombat, "scrc002.mid");   // M£sicas
+            strcpy (musicCombat, "scrc002.mid");   // Musicas
             return CargaPantalla ("pant002.zkt");  // Devolvemos la pantalla
   case (3): for (i = 0; i < 5; i++)
                 player->carac[i] += 10;
             callBack = StopYoda;
             play_fli ("yoda.fli",screen,FALSE,callBack);
             set_gfx_mode (GFX_AUTODETECT,640,480,0,0);
-            strcpy (musicGame, "scr003.mid");          // Lo mismo aqu¡
+            strcpy (musicGame, "scr003.mid");          // Lo mismo aqui
             strcpy (musicCombat, "scrc003.mid");
             return CargaPantalla ("pant003.zkt");
   case (4): for (i = 0; i < 5; i++)
                 player->carac[i] += 15;
             callBack = StopDanste;
             play_fli ("danste1.flc",screen,FALSE,callBack);
-            set_gfx_mode (GFX_AUTODETECT,640,480,0,0);  // y aqu¡
+            set_gfx_mode (GFX_AUTODETECT,640,480,0,0);  // y aqui
             strcpy (musicGame, "scr004.mid");
             strcpy (musicCombat, "scrc004.mid");
             return CargaPantalla ("pant004.zkt");
@@ -358,7 +358,7 @@ TLISTACUAD CargaPantallaI (int codigo, char musicGame[13], char musicCombat[13],
         Nombre: DibujaParedes
         Tipo: void
         Par metros de entrada: fondo, BITMAP. pared: array con las paredes
-        Descripci¢n: dibuja las paredes especificadas en pared sobre el bitmap
+        Descripcion: dibuja las paredes especificadas en pared sobre el bitmap
 ************************************************************/
 
 void DibujaParedes(BITMAP *fondo,int *pared)
@@ -392,7 +392,7 @@ void DibujaParedes(BITMAP *fondo,int *pared)
         Nombre: DibujaPuertas
         Tipo: void
         Par metros de entrada: fondo, BITMAP. puerta: array con las puertas
-        Descripci¢n: dibuja las puertas especificadas en puerta sobre el bitmap
+        Descripcion: dibuja las puertas especificadas en puerta sobre el bitmap
 ************************************************************/
 
 void DibujaPuertas (BITMAP *fondo,int *puerta)
@@ -418,7 +418,7 @@ void DibujaPuertas (BITMAP *fondo,int *puerta)
         Tipo: void
         Par metros de entrada: base, string con la base de los fotogramas.
                    fot, array de apuntadores a BITMAP
-        Descripci¢n: carga en fot las im genes dadas por base.
+        Descripcion: carga en fot las imagenes dadas por base.
 ************************************************************/
 
 void CargaFotPlayer(char *base,BITMAP **fot)
@@ -432,7 +432,7 @@ void CargaFotPlayer(char *base,BITMAP **fot)
  fot[1] = load_bitmap (strcat (temp2,"U0001.bmp"),pal);
  strcpy (temp2,base);
  fot[2] = load_bitmap (strcat (temp2,"U0002.bmp"),pal);
- strcpy (temp2,base);                                   // As¡ con todos
+ strcpy (temp2,base);                                   // Asi con todos
  fot[3] = load_bitmap (strcat (temp2,"U0003.bmp"),pal);
  strcpy (temp2,base);
  fot[4] = load_bitmap (strcat (temp2,"U0004.bmp"),pal);
@@ -494,7 +494,7 @@ void CargaFotPlayer(char *base,BITMAP **fot)
         Tipo: void
         Par metros de entrada: sala en la que estamos.
                    pnjFot, array de apuntadores a BITMAP
-        Descripci¢n: carga en pnjFot las im genes del PNJ de la sala (si lo
+        Descripcion: carga en pnjFot las imagenes del PNJ de la sala (si lo
                      hubiere).
 ************************************************************/
 
@@ -526,7 +526,7 @@ void CargaFotPnj (TSALA sala,BITMAP **pnjFot)
         Tipo: void
         Par metros de entrada: objetos: lista de objetos
                    sala: sala actual. Doble buffer.
-        Descripci¢n: dibuja en el doble buffer los objetos de la sala.
+        Descripcion: dibuja en el doble buffer los objetos de la sala.
 ************************************************************/
 
 void DibujaObjetos (List objetos,TSALA sala,BITMAP *doublebuffer)
@@ -537,7 +537,7 @@ void DibujaObjetos (List objetos,TSALA sala,BITMAP *doublebuffer)
  while (i<5) //mientras no miremos todos
  {
   if (sala.codObjetosSala[i])
-  { // si hay objeto en esa posici¢n
+  { // si hay objeto en esa posicion
    temp = RetrieveI (Find (sala.codObjetosSala[i],objetos)); // Coge la imagen
    draw_sprite (doublebuffer,temp,sala.coordObjetos[0][i],   // y la dibujas
         sala.coordObjetos[1][i]);                            // en sus
@@ -554,7 +554,7 @@ void DibujaObjetos (List objetos,TSALA sala,BITMAP *doublebuffer)
         Tipo: void
         Par metros de entrada: sala, fotogramas del PNJ, doblebuffer,
                    fotograma a dibujar
-        Descripci¢n: dibuja el fotograma del PNJ para que si le miramos nos
+        Descripcion: dibuja el fotograma del PNJ para que si le miramos nos
                      mire.
 ************************************************************/
 
@@ -584,7 +584,7 @@ void DibujaPnj (TSALA sala,BITMAP **pnjFot, BITMAP *doublebuffer, int i)
         Tipo: void
         Par metros de entrada: fondo, doblebuffer, texto, pnjFot, fot,
                    music, pantalla
-        Descripci¢n: Destruye la memoria din mica asociada a todos los
+        Descripcion: Destruye la memoria din mica asociada a todos los
                      par metros de entrada.
 ************************************************************/
 
@@ -614,7 +614,7 @@ void DestruyeTodo (BITMAP *fondo,BITMAP *doublebuffer,BITMAP *texto,
         Nombre: Rotar
         Tipo: void
         Par metros de entrada: objetos, array de 20 enteros. i, entero
-        Descripci¢n: desplaza hacia arriba el array en una posici¢n desde
+        Descripcion: desplaza hacia arriba el array en una posicion desde
                      la siguiente a la indicada. Inserta cero al final.
 ************************************************************/
 
@@ -632,8 +632,8 @@ void Rotar ( int objetos[20], int i)
 
         Nombre: AbrePuerta
         Tipo: int. Devuelve 0 si no se ha abierto la puerta, 1 si lo ha hecho
-        Par metros de entrada: aAbrir, n£mero de puerta. sala, personaje.
-        Descripci¢n: Si se puede, abre una deerminada puerta.
+        Par metros de entrada: aAbrir, numero de puerta. sala, personaje.
+        Descripcion: Si se puede, abre una deerminada puerta.
 ************************************************************/
 
 int AbrePuerta (char aAbrir,TSALA *sala, TPERSONAJE *personaje)
@@ -664,8 +664,8 @@ int AbrePuerta (char aAbrir,TSALA *sala, TPERSONAJE *personaje)
         Nombre: ActualizaSalaHablar
         Tipo: void
         Par metros de entrada: sala, conversacion, player.
-        Descripci¢n: actualiza la sala al intentar hablar con el PNJ,
-                     y devuelve el fichero de conversaci¢n abierto.
+        Descripcion: actualiza la sala al intentar hablar con el PNJ,
+                     y devuelve el fichero de conversacion abierto.
 ************************************************************/
 
 void ActualizaSalaHablar (TSALA *sala, FILE **conversacion, TPERSONAJE *player)
@@ -702,7 +702,7 @@ void ActualizaSalaHablar (TSALA *sala, FILE **conversacion, TPERSONAJE *player)
         Nombre: Hablar
         Tipo: void
         Par metros de entrada: sala, player, doblebuffer
-        Descripci¢n: se muestra el archivo de conversaci¢n espec¡fico.
+        Descripcion: se muestra el archivo de conversacion especifico.
                      EL FICHERO HA DE SER CORRECTO.
 ************************************************************/
 
@@ -752,7 +752,7 @@ void Hablar (TSALA *sala, TPERSONAJE *player, BITMAP *doublebuffer)
         Tipo: void
         Par metros de entrada: sala, player, mapacolisiones, codigo,
                    lista de objetos.
-        Descripci¢n: Cogemos el objeto del c¢digo escogido. Lo quitamos
+        Descripcion: Cogemos el objeto del codigo escogido. Lo quitamos
                      del mapa de colisiones y de la sala.
 ************************************************************/
 
@@ -795,7 +795,7 @@ void CogerObjeto (TSALA *sala,TPERSONAJE *player,char mapaColisiones[640][380],
         Nombre: DibujaCarac
         Tipo: void
         Par metros de entrada: player y doublebuffer
-        Descripci¢n: escribe las caracter¡sticas de player en doublebuffer
+        Descripcion: escribe las caracteristicas de player en doublebuffer
 ************************************************************/
 
 void DibujaCarac ( TPERSONAJE *player, BITMAP *doublebuffer)
@@ -821,7 +821,7 @@ void DibujaCarac ( TPERSONAJE *player, BITMAP *doublebuffer)
         Nombre: EscribeObjetos
         Tipo: void
         Par metros de entrada: objetos, inventario, i, doublebuffer
-        Descripci¢n: escribe los objetos del personaje en doublebuffer
+        Descripcion: escribe los objetos del personaje en doublebuffer
                      y pone en blanco el seleccionado por i.
 ************************************************************/
 
@@ -849,7 +849,7 @@ void EscribeObjetos (List objetos,int inventario[20], int i,
         Nombre: UsaObjeto
         Tipo: void
         Par metros de entrada: indice (entero), lista de objetos, player
-        Descripci¢n: usa uno de los objetos de player.
+        Descripcion: usa uno de los objetos de player.
 ************************************************************/
 
 void UsaObjeto ( int *indice, List objetos, TPERSONAJE *player)
@@ -866,7 +866,7 @@ void UsaObjeto ( int *indice, List objetos, TPERSONAJE *player)
      player->carac[3] = player->carac[4]; // sin superar el m ximo de vida
   Rotar (player->objetos,*indice);        // rotamos
   if (player->objetos[*indice] == 0 && *indice) (*indice)--; // si indice era
- }                                         // el £ltimo, ahora es el anterior
+ }                                         // el ultimo, ahora es el anterior
 
  return;
 }
@@ -878,8 +878,8 @@ void UsaObjeto ( int *indice, List objetos, TPERSONAJE *player)
         Nombre: DibujaFondoMenu
         Tipo: void
         Par metros de entrada: fondo, player
-        Descripci¢n: dibuja en fondo el dibujo correspondiente a player,
-                     y las l¡neas divisorias.
+        Descripcion: dibuja en fondo el dibujo correspondiente a player,
+                     y las lineas divisorias.
 ************************************************************/
 
 void DibujaFondoMenu (BITMAP *fondo, TPERSONAJE *player)
@@ -912,7 +912,7 @@ void DibujaFondoMenu (BITMAP *fondo, TPERSONAJE *player)
         Nombre: Menu
         Tipo: void
         Par metros de entrada: player, doublebuffer, objetos
-        Descripci¢n: muestra los atributos y objetos de player. Permite usar
+        Descripcion: muestra los atributos y objetos de player. Permite usar
                      objetos.
 ************************************************************/
 
@@ -960,7 +960,7 @@ void Menu (TPERSONAJE *player, BITMAP *doublebuffer, List objetos)
         Nombre: MueveArriba
         Tipo: void
         Par metros de entrada: mapacolisiones, x , y , i.
-        Descripci¢n: si se puede, desplazamos al jugador hacia arriba,
+        Descripcion: si se puede, desplazamos al jugador hacia arriba,
                      y actualizamos su fotograma.
 ************************************************************/
 
@@ -969,7 +969,7 @@ void MueveArriba (char mapaColisiones[640][380],int *x,int *y, int *i)
  if ((*y) >= 4 && !Colision(mapaColisiones,*x,*y-6,*x+40,*y)) // no estamos
  {                                                            // en el borde
   (*y)-=6;                                                    // y no hay
-  if ((*i) >= 0 && (*i)<=5)                                   // colisi¢n
+  if ((*i) >= 0 && (*i)<=5)                                   // colision
      (*i)++;
   else (*i) = 1;
  }
@@ -985,7 +985,7 @@ void MueveArriba (char mapaColisiones[640][380],int *x,int *y, int *i)
         Nombre: MueveAbajo
         Tipo: void
         Par metros de entrada: mapacolisiones, x , y , i.
-        Descripci¢n: si se puede, desplazamos al jugador hacia abajo,
+        Descripcion: si se puede, desplazamos al jugador hacia abajo,
                      y actualizamos su fotograma.
 ************************************************************/
 
@@ -1010,7 +1010,7 @@ void MueveAbajo (char mapaColisiones[640][380],int *x,int *y, int *i)
         Nombre: MueveIzquierda
         Tipo: void
         Par metros de entrada: mapacolisiones, x , y , i.
-        Descripci¢n: si se puede, desplazamos al jugador hacia la izquierda
+        Descripcion: si se puede, desplazamos al jugador hacia la izquierda
                      y actualizamos su fotograma.
 ************************************************************/
 
@@ -1035,7 +1035,7 @@ void MueveIzquierda (char mapaColisiones[640][380],int *x,int *y, int *i)
         Nombre: MueveDerecha
         Tipo: void
         Par metros de entrada: mapacolisiones, x , y , i.
-        Descripci¢n: si se puede, desplazamos al jugador hacia la derecha
+        Descripcion: si se puede, desplazamos al jugador hacia la derecha
                      y actualizamos su fotograma.
 ************************************************************/
 
@@ -1061,7 +1061,7 @@ void MueveDerecha (char mapaColisiones[640][380],int *x,int *y, int *i)
         Tipo: void
         Par metros de entrada: coordenadas, fotograma actual, mapa de colisiones
                    sala, player, objetos, doublebuffer, pantalla
-        Descripci¢n: dependiendo del objeto con el que haya colisi¢n se
+        Descripcion: dependiendo del objeto con el que haya colision se
                      llamar  a la rutina para tratarla.
 ************************************************************/
 
@@ -1073,7 +1073,7 @@ void AccionSpace (int *x,int *y,int *i,char mapaColisiones[640][380],
 
  *i = 7*((int) ((*i)/7)); // i es un fotograma base
  switch (*i)
- { // calculamos la colisi¢n seg£n la direcci¢n en que miramos
+ { // calculamos la colision segun la direccion en que miramos
   case (0):codCol=Colision(mapaColisiones,*x,*y-6,*x+40,*y);break;
   case (7):codCol=Colision(mapaColisiones,*x,*y+70,*x+40,*y+76);break;
   case (14):codCol=Colision(mapaColisiones,*x-6,*y,*x,*y+70);break;
@@ -1114,7 +1114,7 @@ void AccionSpace (int *x,int *y,int *i,char mapaColisiones[640][380],
         Par metros de entrada: coordenadas, fotograma, mapa de colisiones,
                    sala, pantalla, personaje, objetos, codigo de la sala
                    actual, doblebuffer.
-        Descripci¢n: se ejecutar  una rutina, dependiendo de la tecla
+        Descripcion: se ejecutar  una rutina, dependiendo de la tecla
                      pulsada.
 ************************************************************/
 
@@ -1161,7 +1161,7 @@ void MuevePlayer (int *x,int *y,int *i,char mapaColisiones[640][380],
         Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
-        Descripci¢n: Cambiamos, si se puede, a la sala oeste.
+        Descripcion: Cambiamos, si se puede, a la sala oeste.
 ************************************************************/
 
 void CambiaASalaOeste (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
@@ -1198,7 +1198,7 @@ void CambiaASalaOeste (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
         Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
-        Descripci¢n: Cambiamos, si se puede, a la sala este.
+        Descripcion: Cambiamos, si se puede, a la sala este.
 ************************************************************/
 
 void CambiaASalaEste (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
@@ -1235,7 +1235,7 @@ void CambiaASalaEste (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
         Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
-        Descripci¢n: Cambiamos, si se puede, a la sala norte.
+        Descripcion: Cambiamos, si se puede, a la sala norte.
 ************************************************************/
 
 void CambiaASalaNorte (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
@@ -1273,7 +1273,7 @@ void CambiaASalaNorte (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
         Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
-        Descripci¢n: Cambiamos, si se puede, a la sala sur.
+        Descripcion: Cambiamos, si se puede, a la sala sur.
 ************************************************************/
 
 void CambiaASalaSur (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
@@ -1311,7 +1311,7 @@ void CambiaASalaSur (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
         Par metros de entrada: musicG, music, doublebuffer, texto, objetos,
                    sala, mapaColisiones, fondo, personaje, fot, pnjFot
                    pantalla, pal.
-        Descripci¢n: Carga todo lo necesario para comenzar a jugar la
+        Descripcion: Carga todo lo necesario para comenzar a jugar la
                      pantalla.
 ************************************************************/
 
@@ -1321,7 +1321,7 @@ void CargaIniciales (char musicG[13],MIDI **music,BITMAP **doublebuffer,
                      TPERSONAJE *personaje, BITMAP *(fot[28]),
                      BITMAP *pnjFot[4],TLISTACUAD pantalla,PALETTE *pal)
 {
- *music = load_midi (musicG);               // M£sica
+ *music = load_midi (musicG);               // Musica
  play_midi (*music,TRUE);
  text_mode (-1);
  *doublebuffer = create_bitmap (640,480);   // Doble buffer
@@ -1349,7 +1349,7 @@ void CargaIniciales (char musicG[13],MIDI **music,BITMAP **doublebuffer,
         Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
-        Descripci¢n: decide si hay que cambiar a alguna sala.
+        Descripcion: decide si hay que cambiar a alguna sala.
 ************************************************************/
 
 void SiHayQueCambiar (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
@@ -1377,10 +1377,10 @@ void SiHayQueCambiar (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
         Nombre: JuegoEnSi
         Tipo: int
         Par metros de entrada: personaje, pantalla, musicG, musicC,
-                   codActual (c¢digo de la pantalla actual), x, y.
-        Descripci¢n: es el motor del juego. Desarrolla toda la pantalla,
+                   codActual (codigo de la pantalla actual), x, y.
+        Descripcion: es el motor del juego. Desarrolla toda la pantalla,
                      hasta que la terminemos, decidamos salir o el personaje
-                     muera, y devuelve la raz¢n de la salida.
+                     muera, y devuelve la razon de la salida.
 ************************************************************/
 
 int JuegoEnSi (TPERSONAJE *personaje, TLISTACUAD pantalla, char musicG[13],
@@ -1400,9 +1400,9 @@ int JuegoEnSi (TPERSONAJE *personaje, TLISTACUAD pantalla, char musicG[13],
                  mapaColisiones,&fondo,personaje,fot,pnjFot,pantalla,&pal);
  DibujaParedes (fondo,sala.pared); // en fondo tenemos ya la parte est tica
  while (!key[KEY_S] && sala.codigo != 999 && personaje->carac[3])
- { // Mientras no se pulse s, o no sea la £ltima sala o estemos vivos
+ { // Mientras no se pulse s, o no sea la ultima sala o estemos vivos
   while (!key[KEY_X] && sala.codigo != 999 && personaje->carac[3])
-  { // Mientras no se pulse x, o no sea la £ltima sala o estemos vivos
+  { // Mientras no se pulse x, o no sea la ultima sala o estemos vivos
    blit (fondo,doublebuffer,0,0,0,0,640,380);
    DibujaPuertas (doublebuffer,sala.enlaces[0]);
    DibujaObjetos (objetos,sala,doublebuffer);
@@ -1415,7 +1415,7 @@ int JuegoEnSi (TPERSONAJE *personaje, TLISTACUAD pantalla, char musicG[13],
    if (m = HayCombate (sala))
    { // si hay combate
     Combate (sala,personaje, m, musicC, doublebuffer); // luchamos
-    play_midi (music,TRUE); // vuelve la m£sica
+    play_midi (music,TRUE); // vuelve la musica
     set_palette (pal); // y la paleta
    }
    SiHayQueCambiar (&fondo, pnjFot, &x, &y, &sala, &pal, &pantalla,
@@ -1423,7 +1423,7 @@ int JuegoEnSi (TPERSONAJE *personaje, TLISTACUAD pantalla, char musicG[13],
    if (sala.codigo == 999)
       CombateFinal (personaje,doublebuffer,codActual); // ¨malo final?
   }
-  if (key[KEY_X]) // si queremos salir, confirmaci¢n
+  if (key[KEY_X]) // si queremos salir, confirmacion
   {
    blit (texto,screen,0,0,170,200,300,30);
    readkey();
@@ -1442,7 +1442,7 @@ int JuegoEnSi (TPERSONAJE *personaje, TLISTACUAD pantalla, char musicG[13],
         Nombre: Muestra
         Tipo: void
         Par metros de entrada:fich, doublebuffer, xi, yi
-        Descripci¢n: muestra el fichero de cr‚ditos, usando buffer, y con
+        Descripcion: muestra el fichero de cr‚ditos, usando buffer, y con
                      coordenadas base xi yi.
 ************************************************************/
 
@@ -1486,7 +1486,7 @@ void Muestra (FILE *fich,BITMAP *doublebuffer,int xi, int yi)
         Nombre: Creditos
         Tipo: void
         Par metros de entrada: ninguno
-        Descripci¢n: Muestra los cr‚ditos del juego
+        Descripcion: Muestra los cr‚ditos del juego
 ************************************************************/
 
 void Creditos ()
@@ -1497,7 +1497,7 @@ void Creditos ()
  PALETTE pal;
  FILE *actual;
 
- music = load_midi ("credits.mid");             // m£sica...
+ music = load_midi ("credits.mid");             // musica...
  doublebuffer = create_bitmap (640,480);
  clear (doublebuffer);
  aMostrar = load_bitmap ("FF92LOGO.bmp",pal);
@@ -1549,7 +1549,7 @@ void Creditos ()
         Nombre: FinalizaTodo
         Tipo: void
         Par metros de entrada: ninguno
-        Descripci¢n: sale se Allegro
+        Descripcion: sale se Allegro
 ************************************************************/
 
 void FinalizaTodo ()
@@ -1565,8 +1565,8 @@ void FinalizaTodo ()
         Nombre: MenuInicial
         Tipo: int
         Par metros de entrada: ninguno
-        Descripci¢n: muestra el men£ inicial y nos hace escoger
-                     opci¢n.
+        Descripcion: muestra el menu inicial y nos hace escoger
+                     opcion.
 ************************************************************/
 
 int MenuInicial ()
@@ -1579,7 +1579,7 @@ int MenuInicial ()
  music = load_midi ("menu.mid");
  play_midi (music,TRUE);
  clear (screen);
- logo = load_bitmap ("FF92logo.bmp",pal);  // Cargamos fondo y m£sica
+ logo = load_bitmap ("FF92logo.bmp",pal);  // Cargamos fondo y musica
  doublebuffer = create_bitmap (640,480);   //
  clear (doublebuffer);                     //
  set_palette (pal);
@@ -1591,24 +1591,24 @@ int MenuInicial ()
   textprintf (doublebuffer,font,300,265,(i==2)?215:86,"CARGAR PARTIDA");
   textprintf (doublebuffer,font,300,280,(i==3)?215:86,"SALIR");
   blit (doublebuffer,screen,0,0,0,0,640,480); // Como siempre el color
-  if (key[KEY_UP])                            // depende de la selecci¢n.
-  {     // selecci¢n anterior
+  if (key[KEY_UP])                            // depende de la seleccion.
+  {     // seleccion anterior
    i--;
    clear_keybuf();
   }
   else if (key[KEY_DOWN])
-  {     // selecci¢n siguiente
+  {     // seleccion siguiente
    i++;
    clear_keybuf();
   }
-  i = (i==4)?3:i;     // control de l¡mites
+  i = (i==4)?3:i;     // control de limites
   i = (i==0)?1:i;
  }
  clear_keybuf();
  destroy_bitmap (doublebuffer);
  destroy_midi (music);
 
- return i;  // devolvemos la selecci¢n
+ return i;  // devolvemos la seleccion
 }
 
 
@@ -1618,7 +1618,7 @@ int MenuInicial ()
         Nombre: main
         Tipo: int
         Par metros de entrada: ninguno
-        Descripci¢n: funci¢n principal, que controla cuando hay que
+        Descripcion: funcion principal, que controla cuando hay que
                      salir.
 ************************************************************/
 
@@ -1629,11 +1629,11 @@ int main (void)
  int poque, tipo=1,i,x,y;
  char musicGame[13],musicCombat[13];
 
- InicializaTodo ();        // Inicializaci¢n
+ InicializaTodo ();        // Inicializacion
  Logos();                  // Logos iniciales
  while (tipo != 3)
  {                         // Mientras no queramos salir
-  tipo = MenuInicial();    // Men£
+  tipo = MenuInicial();    // Menu
   poque = 0;
   if (tipo == 1)           // Partida nueva
   {

@@ -14,8 +14,8 @@
         Nombre: HayCombate
         Tipo: entero
         Par metros de entrada: sala
-        Descripci¢n: determina de manera aleatoria si ha de producirse un
-                     combate. Devuelve cero o el c¢digo de un enemigo de la
+        Descripcion: determina de manera aleatoria si ha de producirse un
+                     combate. Devuelve cero o el codigo de un enemigo de la
                      sala.
 ************************************************************/
 
@@ -35,7 +35,7 @@ int HayCombate (TSALA sala)
         Tipo: void
         Par metros de entrada: base, base del nombre de los fotogramas del
                    personaje. fot, array de apuntadores a BITMAP.
-        Descripci¢n: carga todos los fotogramas de combate del personaje, y
+        Descripcion: carga todos los fotogramas de combate del personaje, y
                      los devuelve en fot.
 
 ************************************************************/
@@ -76,7 +76,7 @@ void CargaFotPlayerC (char *base,BITMAP *(fot[12]))
         Tipo: void
         Par metros de entrada:base del nombre de los fotogramas. fot: array
                    de apuntadores a BITMAP. malo: enemigo.
-        Descripci¢n: Carga los fotogramas del enemigo, dependiendo de cu les
+        Descripcion: Carga los fotogramas del enemigo, dependiendo de cu les
                      sean las magias que pueda hacer. Los devuelve en fot.
 
 ************************************************************/
@@ -130,7 +130,7 @@ void CargaFotPnjC (char *base,BITMAP *(fot[12]),TMALO malo)
         Nombre: Tirada
         Tipo: entero (int)
         Par metros de entrada: aFavor: dados a favor. enContra: dados en contra
-        Descripci¢n: realiza una tirada opuesta de dados a dificultad cinco
+        Descripcion: realiza una tirada opuesta de dados a dificultad cinco
                      para la tirada a favor, y siete en contra.
 
 ************************************************************/
@@ -158,7 +158,7 @@ int Tirada (int aFavor,int enContra)
         Tipo: void
         Par metros de entrada: resultado, de tipo entero. doublebuffer,
                    BITMAP.
-        Descripci¢n: si resultado es cero escribir  un mensaje aleatorio
+        Descripcion: si resultado es cero escribir  un mensaje aleatorio
                      en doblebuffer. Saca el contenido de doublebuffer en
                      pantalla.
                      Los mensajes son para el "bueno".
@@ -214,7 +214,7 @@ void Pifia ( int resultado, BITMAP *doublebuffer )
         Tipo: void
         Par metros de entrada: resultado, de tipo entero. doublebuffer,
                    BITMAP.
-        Descripci¢n: si resultado es cero escribir  un mensaje aleatorio
+        Descripcion: si resultado es cero escribir  un mensaje aleatorio
                      en doblebuffer. Saca el contenido de doublebuffer en
                      pantalla.
                      Esta vez los mensajes son para el "malo".
@@ -271,7 +271,7 @@ void PifiaM ( int resultado, BITMAP *doublebuffer )
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza el ataque base al "malo".
+        Descripcion: Realiza el ataque base al "malo".
 
 ************************************************************/
 
@@ -320,7 +320,7 @@ void AtaqueBase (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza el ataque base al "bueno".
+        Descripcion: Realiza el ataque base al "bueno".
 
 ************************************************************/
 
@@ -366,7 +366,7 @@ void AtaqueBaseM (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: En bueno se cura...
+        Descripcion: En bueno se cura...
 
 ************************************************************/
 
@@ -405,7 +405,7 @@ void Curarse (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: el "malo" se cura
+        Descripcion: el "malo" se cura
 
 ************************************************************/
 
@@ -444,7 +444,7 @@ void CurarseM (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza el ataque bestia al "malo".
+        Descripcion: Realiza el ataque bestia al "malo".
 
 ************************************************************/
 
@@ -490,7 +490,7 @@ void AtaqueBestia (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza el ataque bestia al "bueno".
+        Descripcion: Realiza el ataque bestia al "bueno".
 
 ************************************************************/
 
@@ -535,7 +535,7 @@ void AtaqueBestiaM (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza la magia rayo al "malo".
+        Descripcion: Realiza la magia rayo al "malo".
 
 ************************************************************/
 
@@ -581,7 +581,7 @@ void Rayo (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza la magia 1 del "malo".
+        Descripcion: Realiza la magia 1 del "malo".
 
 ************************************************************/
 
@@ -626,7 +626,7 @@ void Magia1M (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza la magia fuego al "malo".
+        Descripcion: Realiza la magia fuego al "malo".
 
 ************************************************************/
 
@@ -672,7 +672,7 @@ void Fuego (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza la segunda magia del malo al "bueno".
+        Descripcion: Realiza la segunda magia del malo al "bueno".
 
 ************************************************************/
 
@@ -717,7 +717,7 @@ void Magia2M (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Invoca al drag¢n Bahamut por parte del bueno...
+        Descripcion: Invoca al dragon Bahamut por parte del bueno...
 
 ************************************************************/
 
@@ -769,7 +769,7 @@ void Bahamut (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer, BITMAP. fondo, BITMAP. personaje,
                    personaje jugador. fot, fotogramas del personaje jugador.
                    malo, PNJ. pnjFot, fotogramas del PNJ.
-        Descripci¢n: Realiza la invocaci¢n del malo sobre el bueno.
+        Descripcion: Realiza la invocacion del malo sobre el bueno.
 
 ************************************************************/
 
@@ -817,10 +817,10 @@ void InvocacionM (BITMAP *doublebuffer,BITMAP *fondo,TPERSONAJE *personaje,
 
         Nombre: EjecutaAccion
         Tipo: void
-        Par metros de entrada: i, entero con la selecci¢n. doublebuffer y
+        Par metros de entrada: i, entero con la seleccion. doublebuffer y
                    fondo, BITMAPs. Personaje y malo, con sus fotogramas.
                    Apuntador a entero con el tiempo para combates...
-        Descripci¢n: ejecuta una acci¢n dependiendo del valor de i.
+        Descripcion: ejecuta una accion dependiendo del valor de i.
                      actualiza el contenido de tiempo.
 
 ************************************************************/
@@ -858,10 +858,10 @@ void EjecutaAccion (int i,BITMAP *doublebuffer,TPERSONAJE *personaje,
 
         Nombre: EjecutaAccionMalo
         Tipo: void
-        Par metros de entrada: i, entero con la selecci¢n. doublebuffer y
+        Par metros de entrada: i, entero con la seleccion. doublebuffer y
                    fondo, BITMAPs. Personaje y malo, con sus fotogramas.
                    Apuntador a entero con el tiempo para combates...
-        Descripci¢n: ejecuta una acci¢n dependiendo del valor de i.
+        Descripcion: ejecuta una accion dependiendo del valor de i.
                      actualiza el contenido de tiempo.
 
 ************************************************************/
@@ -898,14 +898,14 @@ void EjecutaAccionMalo (BITMAP *doublebuffer,TPERSONAJE *personaje,
 /***********************************************************
 
         Nombre: AtacarAMalo
-        Tipo: entero (int). Ser  uno si se ha ejecutado alguna opci¢n,
+        Tipo: entero (int). Ser  uno si se ha ejecutado alguna opcion,
               cero si no se ha ejecutado nada.
         Par metros de entrada: doublebuffer y fondo, BITMAPs. Personaje y
                    malo, con sus fotogramas. Apuntador a entero con el
                    tiempo para combates...
-        Descripci¢n: Nos permite seleccionar un ataque de los disponibles, o
-                     volver al men£ anterior. El jugador se desplaza por el
-                     men£ de izquierda a derecha. El men£ es c¡clico.
+        Descripcion: Nos permite seleccionar un ataque de los disponibles, o
+                     volver al menu anterior. El jugador se desplaza por el
+                     menu de izquierda a derecha. El menu es ciclico.
 
 ************************************************************/
 
@@ -913,18 +913,18 @@ int AtacarAMalo (BITMAP *doublebuffer,TPERSONAJE *personaje,
                  BITMAP *(fot[12]),TMALO *malo,BITMAP *(pnjFot[12]),
                  int *tiempo,BITMAP *fondo)
 {
- int i=1; // Selecci¢n actual
+ int i=1; // Seleccion actual
 
  while (!key[KEY_ENTER] && !key[KEY_ESC])
  { // Mientras no pulsemos Enter o Escape...
   DibujaRecuadroAtaque (doublebuffer,i);   // ...dibujamos el recuadro con la
-  blit (doublebuffer,screen,0,0,0,0,640,480); // opci¢n seleccionada
+  blit (doublebuffer,screen,0,0,0,0,640,480); // opcion seleccionada
   if (key[KEY_LEFT])
   { // si se pulsa la izquierda
-   i--;                                 // Selecci¢n anterior
+   i--;                                 // Seleccion anterior
    clear_keybuf();
    i = (i==0)?personaje->nivel:i;       // si se pasa de la primera, mostramos
-  }                                     // la £ltima.
+  }                                     // la ultima.
   if (key[KEY_RIGHT])
   { // para la derecha se selecciona el siguiente...
    i++;
@@ -936,7 +936,7 @@ int AtacarAMalo (BITMAP *doublebuffer,TPERSONAJE *personaje,
  { // Si se pulsa el enter
   clear_keybuf();
   EjecutaAccion (i,doublebuffer,personaje,fot,malo,pnjFot,tiempo,fondo);
-  return 1;  // se ejecuta la acci¢n y devolvemos uno
+  return 1;  // se ejecuta la accion y devolvemos uno
  }
  if (key[KEY_ESC])
  { // Si se pulsa el Escape
@@ -954,7 +954,7 @@ int AtacarAMalo (BITMAP *doublebuffer,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer y fondo, BITMAPs. Personaje y
                    malo, con sus fotogramas.
                    Apuntador a entero con el tiempo para combates...
-        Descripci¢n: seleccionamos el movimiento que realizar el bueno:
+        Descripcion: seleccionamos el movimiento que realizar el bueno:
                      Atacar, Esperar o Salir.
 
 ************************************************************/
@@ -964,7 +964,7 @@ void MovimientoBueno (BITMAP *doublebuffer,TPERSONAJE *personaje,
                       int *tiempo,BITMAP *fondo)
 {
  int hecho=0,i=0; // hecho: indica si hemos hecho algo.
-                  // i: selecci¢n actual
+                  // i: seleccion actual
 
  while (!hecho)
  { // Mientras no hagamos nada...
@@ -980,7 +980,7 @@ void MovimientoBueno (BITMAP *doublebuffer,TPERSONAJE *personaje,
   { // Si pulsamos abajo...
    clear_keybuf();
    i++;              // seleccionamos el inferior,
-   i = (i==3)?2:i;   // del que no se puede pasar si es el £ltimo (i==2).
+   i = (i==3)?2:i;   // del que no se puede pasar si es el ultimo (i==2).
   } else
   if (key[KEY_M])
   { // Si pulsamos la M (truco)...
@@ -1018,7 +1018,7 @@ void MovimientoBueno (BITMAP *doublebuffer,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer y fondo, BITMAPs. Personaje y
                    malo, con sus fotogramas.
                    Apuntador a entero con el tiempo para combates...
-        Descripci¢n: escoge un movimiento para el malo y lo ejecuta...
+        Descripcion: escoge un movimiento para el malo y lo ejecuta...
 
 ************************************************************/
 
@@ -1049,7 +1049,7 @@ void MovimientoMalo(BITMAP *doublebuffer,TPERSONAJE *personaje,
         Par metros de entrada: doublebuffer y fondo, BITMAPs. Personaje y
                    malo, con sus fotogramas.
                    Apuntador a entero con el tiempo para combates...
-        Descripci¢n: Gestiona el tiempo de los combatientes. Sale del
+        Descripcion: Gestiona el tiempo de los combatientes. Sale del
                      combate cuando uno est‚ muerto.
 
 ************************************************************/
@@ -1089,7 +1089,7 @@ void CombateEnSi (BITMAP *fondo, TPERSONAJE *personaje, TMALO *malo,
         Nombre: DestruyeFotPlayer
         Tipo: void
         Par metros de entrada: fot, fotogramas del jugador.
-        Descripci¢n: Libera la memoria usada por estos...
+        Descripcion: Libera la memoria usada por estos...
 
 ************************************************************/
 
@@ -1112,7 +1112,7 @@ void DestruyeFotPlayer (BITMAP *(fot[12]))
         Tipo: void
         Par metros de entrada: fot, fotogramas del PNJ.
                                malo, el PNJ.
-        Descripci¢n: Destruye los fotogramas cargados del malo...
+        Descripcion: Destruye los fotogramas cargados del malo...
 
 ************************************************************/
 
@@ -1121,7 +1121,7 @@ void DestruyeFotPnj (BITMAP *(fot[12]),TMALO malo)
  destroy_bitmap (fot[0]);
  destroy_bitmap (fot[1]);
  destroy_bitmap (fot[2]);
- if (malo.magias[0].tiene) // Tan s¢lo destruye los que se cargaron
+ if (malo.magias[0].tiene) // Tan solo destruye los que se cargaron
  {
    destroy_bitmap (fot[3]);
    destroy_bitmap (fot[4]);
@@ -1151,10 +1151,10 @@ void DestruyeFotPnj (BITMAP *(fot[12]),TMALO malo)
         Nombre: Combate
         Tipo: void
         Par metros de entrada: sala en que se desarrolla el combate.
-                   personaje. m, c¢digo del malo con el que luchar.
-                   musicC, nombre del fichero con la m£sica para el combate.
+                   personaje. m, codigo del malo con el que luchar.
+                   musicC, nombre del fichero con la musica para el combate.
                    doublebuffer, BITMAP.
-        Descripci¢n: carga lo necesario para el combate, y llama a CombateEnSi
+        Descripcion: carga lo necesario para el combate, y llama a CombateEnSi
 
 ************************************************************/
 
@@ -1165,14 +1165,14 @@ void Combate (TSALA sala, TPERSONAJE *personaje,int m, char musicC[13],
  BITMAP *fondo;                   // El fondo
  BITMAP *(fot[12]),*(pnjFot[12]); // Los fotogramas
  PALETTE pal;                     // La paleta
- MIDI *musicCombate;              // La m£sica
+ MIDI *musicCombate;              // La musica
 
  clear (doublebuffer);
  malo = CargaMalo (m);            // Cargamos el malo,
  CargaFotPlayerC(personaje->fot,fot);         //
  CargaFotPnjC(malo.fotogramas,pnjFot,malo);   // los fotogramas,
  fondo = load_bitmap(sala.fondoCombate,pal);  // el fondo,
- musicCombate = load_midi (musicC);           // la m£sica
+ musicCombate = load_midi (musicC);           // la musica
  play_midi (musicCombate,TRUE);               // y que suene...
  CombateEnSi(fondo,personaje, &malo, fot,pnjFot, doublebuffer); // lucha
  if (personaje->carac[3])     // Si hemos ganado muestra la
@@ -1191,9 +1191,9 @@ void Combate (TSALA sala, TPERSONAJE *personaje,int m, char musicC[13],
 
         Nombre: CombateFinal
         Tipo: void
-        Par metros de entrada: personaje. m, c¢digo del malo con el que luchar.
-                   doublebuffer, BITMAP. C¢digo de la pantalla actual.
-        Descripci¢n: carga lo necesario para el combate con el enemigo final
+        Par metros de entrada: personaje. m, codigo del malo con el que luchar.
+                   doublebuffer, BITMAP. Codigo de la pantalla actual.
+        Descripcion: carga lo necesario para el combate con el enemigo final
                      de pantalla, y llama a CombateEnSi
 
 ************************************************************/
@@ -1223,11 +1223,11 @@ void CombateFinal (TPERSONAJE *personaje,BITMAP *doublebuffer,int codActual)
             fondo = load_bitmap ("fbalrog.bmp",pal);
             break;
   case (4): clear_keybuf ();
-            set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo gr fico
+            set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo grafico
             callBack = StopStd;
             play_fli ("sephmask.fli",screen,FALSE,callBack);
             rest (1000);
-            set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo gr fico
+            set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo grafico
             malo = CargaMalo (999);
             musicCombate = load_midi ("bgtheme.mid");
             fondo = load_bitmap ("fmalofin.bmp",pal);

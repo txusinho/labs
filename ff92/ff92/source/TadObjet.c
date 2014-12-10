@@ -16,7 +16,7 @@
   TIPO: TOBJETO
   PARµMETROS DE ENTRADA: el puntero al fichero de objetos, apuntando
   siguiente registro a leer.
-  êsta funci¢n recoge el fichero de Objetos y devuelve
+  êsta funcion recoge el fichero de Objetos y devuelve
   el objeto siguiente.
 
 *********************************************/
@@ -40,8 +40,8 @@ static TOBJETO CargaSiguiente (FILE *fichObjetos)
   CargaObjeto
 
   TIPO: TOBJETO.
-  PARµMETROS DE ENTRADA:el c¢digo del objeto a leer (cod)
-  êsta funci¢n abre y procesa el fichero de objetos hasta que encuentra
+  PARµMETROS DE ENTRADA:el codigo del objeto a leer (cod)
+  êsta funcion abre y procesa el fichero de objetos hasta que encuentra
   el objeto pedido, y lo devuelve.
 
 *********************************************/
@@ -51,7 +51,7 @@ TOBJETO CargaObjeto (TCODIGO cod)
 {
  FILE *fichObjetos; //vble en la que vamos a abrir el fichero
  TOBJETO temp;      //vble temporal en la que vamos arecoger los datos
-                    //le°dos
+                    //leidos
  fichObjetos = fopen ("objetos.ots","r");
  temp = CargaSiguiente(fichObjetos);
 
@@ -59,7 +59,7 @@ TOBJETO CargaObjeto (TCODIGO cod)
        temp = CargaSiguiente(fichObjetos);
   //por si se ha salido del bucle por encontrar el elemento buscado, cerramos
   //el fichero, en cambio si se ha hecho por fin de fichero, devolvemos 0
-  //en el c¢digo del elemento, para indicar que se ha hecho mal la operaci¢n,
+  //en el codigo del elemento, para indicar que se ha hecho mal la operacion,
   //o se ha buscado un elemento inexistente.
  if (temp.codigo == cod)
  {

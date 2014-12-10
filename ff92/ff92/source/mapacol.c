@@ -15,9 +15,9 @@
         Tipo: void
         Par metros de entrada: mapa de colisiones, coordenadas de inicio y
                                final del espacio a rellenar del mapa y
-                               c¢digo con el que rellenar ese espacio
-        Descripci¢n: Modifica el mapa de colisiones, rellenando el espacio
-                     especificado por las corrdenas con el c¢digo dado en n.
+                               codigo con el que rellenar ese espacio
+        Descripcion: Modifica el mapa de colisiones, rellenando el espacio
+                     especificado por las corrdenas con el codigo dado en n.
 
 **************************************************************/
 
@@ -28,7 +28,7 @@ void RellenaMapa (char mapaColisiones[640][380],int x1,int y1,int x2,int y2,
 
  for (tx = x1 ;tx<=x2;tx++)
       for (ty = y1;ty<=y2;ty++)
-          mapaColisiones[tx][ty]=n; //Asignamos el c¢digo a la posici¢n
+          mapaColisiones[tx][ty]=n; //Asignamos el codigo a la posicion
 
  return;
 }
@@ -39,10 +39,10 @@ void RellenaMapa (char mapaColisiones[640][380],int x1,int y1,int x2,int y2,
         Tipo: void
         Par metros de entrada: array con las puertas de la sala. Mapa de
                                colisiones.
-        Descripci¢n: actualiza el mapa de colisiones con los c¢digos respectivos
+        Descripcion: actualiza el mapa de colisiones con los codigos respectivos
                      a las puertas que aparecen en la sala.
 
-                     C¢digos: 101, 102, 103, 104
+                     Codigos: 101, 102, 103, 104
 
 **************************************************************/
 
@@ -63,10 +63,10 @@ void  RellenaPuertas(int *enlaces, char mapaColisiones[640][380])
         Tipo: void
         Par metros de entrada: array con las paredes de la sala. Mapa de
                                colisiones
-        Descripci¢n: actualiza el mapa de colisiones con los c¢digos de las
+        Descripcion: actualiza el mapa de colisiones con los codigos de las
                      paredes de la sala.
 
-                     C¢digo: 100
+                     Codigo: 100
 
 **************************************************************/
 
@@ -93,12 +93,12 @@ void  RellenaParedes(int *pared, char mapaColisiones[640][380])
 
         Nombre: RellenaObjetos
         Tipo: void
-        Par metros de entrada: c¢digos de los objetos. Coordenadas de los
+        Par metros de entrada: codigos de los objetos. Coordenadas de los
                                objetos, mapa de colisiones, lista de objetos
-        Descripci¢n: actualiza el mapa de colisiones con los c¢digos de los
+        Descripcion: actualiza el mapa de colisiones con los codigos de los
                      objetos de la sala.
 
-                     C¢digo: X
+                     Codigo: X
 
 **************************************************************/
 
@@ -109,12 +109,12 @@ void RellenaObjetos (TCODIGO *codigo,int coordenada[2][5],
  BITMAP *temp;  // Apuntador a imagen
 
  while (i<5)
- { // Mientras haya objetos, y no hallamos pasado del £ltimo...
+ { // Mientras haya objetos, y no hallamos pasado del ultimo...
   if (codigo[i])
   {
    temp = RetrieveI (Find (codigo[i],objetos)); //...recuperamos la imagen...
-        // Rellenamos el mapa seg£n las coordenadas del objeto y las dimen-
-        // siones de su imagen, con su c¢digo...
+        // Rellenamos el mapa segun las coordenadas del objeto y las dimen-
+        // siones de su imagen, con su codigo...
    RellenaMapa (mapaColisiones,coordenada[0][i],coordenada[1][i],
                coordenada[0][i] + temp->w, coordenada[1][i] + temp->h,
                codigo[i]);
@@ -133,10 +133,10 @@ void RellenaObjetos (TCODIGO *codigo,int coordenada[2][5],
         Par metros de entrada: Coordenadas del personaje no jugador, base
                                del nombre de sus fotogramas, mapa de
                                colisiones.
-        Descripci¢n: actualiza el mapa de colisiones en la posici¢n que
+        Descripcion: actualiza el mapa de colisiones en la posicion que
                      ocupa el personaje no jugador de la sala.
 
-                     C¢digo: 105
+                     Codigo: 105
 
 **************************************************************/
 
@@ -164,7 +164,7 @@ void RellenaPnj (int *CoordPnj,char *ImagenPnj,char mapaColisiones[640][380])
         Nombre: CreaMapaColisiones
         Tipo: void
         Par metros de entrada: sala, mapa de colisiones, lista de objetos
-        Descripci¢n: Crea el mapa de colisiones de la sala especificada
+        Descripcion: Crea el mapa de colisiones de la sala especificada
                      para la lista de objetos que le pasamos.
 
 **************************************************************/
@@ -173,7 +173,7 @@ void CreaMapaColisiones (TSALA sala,char mapaColisiones[640][380],List objetos)
 {
  int x,y; //contadores
 
- for (x=0;x<=639;x++)            //  Inicializamos el mapa vac¡o
+ for (x=0;x<=639;x++)            //  Inicializamos el mapa vacio
      for (y=0;y<=379;y++)
          mapaColisiones[x][y]=0;
                                 // Rellenamos las diferentes partes.
@@ -193,7 +193,7 @@ void CreaMapaColisiones (TSALA sala,char mapaColisiones[640][380],List objetos)
         Tipo: char
         Par metros de entrada: mapa de colisiones, coordenadas iniciales y
                                finales.
-        Descripci¢n: Devuelve el primer c¢digo distinto de cero presente en
+        Descripcion: Devuelve el primer codigo distinto de cero presente en
                      el recinto especificado del mapa de colisiones, o cero
                      si no lo hay.
 
@@ -207,6 +207,6 @@ char Colision(char mapaColisiones[640][380], int x1, int y1,int x2, int y2)
      for (j=y1;j<=y2;j++)                // Recorremos el mapa
          if (cod = mapaColisiones[i][j]) return cod;
 
- return 0;  // Si no hab¡a nada, devolvemos cero.
+ return 0;  // Si no habia nada, devolvemos cero.
 }
 

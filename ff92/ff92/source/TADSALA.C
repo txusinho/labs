@@ -14,9 +14,9 @@
 /***************************************************
   CargaSiguiente
 
-  Funci¢n de tipo Tsala
+  Funcion de tipo Tsala
   Par metros de entrada: el puntero al fichero de salas
-  Descripci¢n
+  Descripcion
   Carga el siguiente registro del fichero de salas
 
 ***************************************************/
@@ -29,7 +29,7 @@ TSALA CargaSiguiente (FILE *fichSala)
  char c;  //se utiliza para saber cuando ha llegado fin de lectura
 
  fscanf (fichSala,"%d",&(temp.codigo));
- fscanf (fichSala,"%s",temp.nombre);        //s¡mplemente vamos recogiendo
+ fscanf (fichSala,"%s",temp.nombre);        //simplemente vamos recogiendo
  fscanf (fichSala,"%s",temp.imagen);        //cada uno de los valores y meti‚n-
  for (i=0;i<=11;i++)                        //dolos en su tipo, en la vble temp
      fscanf (fichSala,"%d",&(temp.pared[i]));
@@ -39,7 +39,7 @@ TSALA CargaSiguiente (FILE *fichSala)
  fscanf (fichSala,"%s",temp.pnj);
  if (strcmp (temp.pnj,"NO")) //dado que la marca de que no haya Personajes no
  {                           //jugadores (pnj) es NO, miramos para dar m s
-    fscanf (fichSala,"%d",&(temp.coordenadasPnj[0])); //caracter¡sticas suyas
+    fscanf (fichSala,"%d",&(temp.coordenadasPnj[0])); //caracteristicas suyas
     fscanf (fichSala,"%d",&(temp.coordenadasPnj[1]));
     fscanf (fichSala,"%s",temp.imagenPnj);
     fscanf (fichSala,"%s",temp.dialogo[0]);
@@ -73,12 +73,12 @@ TSALA CargaSiguiente (FILE *fichSala)
 /***************************************************
   GrabaSiguiente
 
-  La funci¢n es de TIPO entero.
+  La funcion es de TIPO entero.
   PARµMETROS: el fichero de salida (*.zkt) y la sala que se va a grabar.
-  Descripci¢n:
+  Descripcion:
   Graba la sala siguiente en el archivo de salida, teniendo en cuenta las
   consideraciones anteriores, tales como el NO para pnjïs como para combates.
-  Devuelve 0 en caso de que la operaci¢n se realice con ‚xito
+  Devuelve 0 en caso de que la operacion se realice con ‚xito
 
 ***************************************************/
 

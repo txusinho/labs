@@ -13,7 +13,7 @@
         Nombre: CargaMaloSiguiente
         Tipo: TMALO
         Par metros de entrada: fichMalos
-        Descripci¢n: lee el siguiente enemigo del fichero.
+        Descripcion: lee el siguiente enemigo del fichero.
                      El fichero ha de ser correcto.
 
 **************************************************************/
@@ -46,7 +46,7 @@ TMALO CargaMaloSiguiente ( FILE *fichMalos )
         Nombre: CargaMalo
         Tipo: TMALO
         Par metros de entrada: codigo
-        Descripci¢n: mediante llamadas a CargaMaloSiguiente, devuelve
+        Descripcion: mediante llamadas a CargaMaloSiguiente, devuelve
                      el enemigo del codigo solicitado.
 
 **************************************************************/

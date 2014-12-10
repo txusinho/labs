@@ -8,9 +8,9 @@
 /* TAD SACADO DE INTERNET, hemos hecho algunas modificaciones,
    ya que algunas funciones estaban mal implementadas, y hemos
    configurado el tipo de datos ElementType como TOBJETO.
-   As¡ mismo, en cada nodo, aparte del objeto, tenemos la
+   Asi mismo, en cada nodo, aparte del objeto, tenemos la
    imagen de este. Debido a esto, nosotros hemos implementado
-   la funci¢n RetrieveI, que no presenta complicaci¢n alguna.*/
+   la funcion RetrieveI, que no presenta complicacion alguna.*/
 
 
 #include "tadObjet.h"
@@ -25,7 +25,7 @@
 	   typedef struct Node
 	   {                              // Nodo de la lista:
 		  ElementType Element;    // Objeto
-                  BITMAP *imagen;         // Im gen
+                  BITMAP *imagen;         // Imagen
 		  struct Node *Next;      // Puntero al siguiente
 	   }Node;
 
@@ -71,8 +71,8 @@
         Nombre: RetrieveI
         Tipo: Puntero a imagen
         Par metros de entrada: puntero a nodo
-        Descripci¢n: Devuelve la direcci¢n de la imagen contenida en
-                     el nodo cuya direcci¢n es P.
+        Descripcion: Devuelve la direccion de la imagen contenida en
+                     el nodo cuya direccion es P.
         Restricciones: P debe de apuntar a un nodo que contenga un
                        apuntador a una imagen creada de tipo BITMAP.
 
@@ -86,9 +86,9 @@
         Nombre: CargaFicheroObjetos
         Tipo: Lista
         Par metros de entrada: nada
-        Descripci¢n: carga el contenido del fichero objetos.ots en
+        Descripcion: carga el contenido del fichero objetos.ots en
                      una lista en memoria, junto con sus respectivas
-                     im genes.
+                     imagenes.
         Restricciones: el fichero objetos.ots ha de existir y ser
                        correcto.
 

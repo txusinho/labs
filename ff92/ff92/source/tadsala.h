@@ -20,7 +20,7 @@ typedef struct TSALA                // tipo de datos SALA
 	    char pnj[21];
 	    int coordenadasPnj[2];
 	    char imagenPnj[13];
-	    char dialogo[2][13];    // ficheros de conversaci¢n
+	    char dialogo[2][13];    // ficheros de conversacion
 	    int hablado;
 	    TCODIGO objetoSiHablamos;
 	    TCODIGO codObjetosSala[5];
@@ -36,9 +36,9 @@ typedef struct TSALA                // tipo de datos SALA
 /***************************************************
   CargaSiguiente
 
-  Funci¢n de tipo Tsala
+  Funcion de tipo Tsala
   Par metros de entrada: el puntero al fichero de salas
-  funci¢n:
+  funcion:
   el siguiente registro del fichero de salas
 
 ***************************************************/
@@ -50,12 +50,12 @@ TSALA CargaSiguiente (FILE *fichSala);
 /***************************************************
   GrabaSiguiente
 
-  La funci¢n es de TIPO entero.
+  La funcion es de TIPO entero.
   PARµMETROS: el fichero de salida (*.zkt) y la sala que se va a grabar.
-  Descripci¢n:
+  Descripcion:
   Graba la sala siguiente en el archivo de salida, teniendo en cuenta las
   consideraciones anteriores, tales como el NO para pnjïs como para combates.
-  Devuelve 0 en caso de que la operaci¢n se realice con ‚xito
+  Devuelve 0 en caso de que la operacion se realice con ‚xito
 
 ***************************************************/
 

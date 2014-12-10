@@ -13,7 +13,7 @@
         Nombre: ActualizaSaved
         Tipo: void
         Par metros de entrada: array de elementos INFO
-        Descripci¢n: graba el array en el archivo saved.dat
+        Descripcion: graba el array en el archivo saved.dat
 
 **************************************************************/
 
@@ -35,7 +35,7 @@ void ActualizaSaved (INFO temp[15])
         Nombre: CargaSaved
         Tipo: void
         Par metros de entrada: array de elementos INFO
-        Descripci¢n: carga en el array el archivo saved.dat
+        Descripcion: carga en el array el archivo saved.dat
 
 **************************************************************/
 

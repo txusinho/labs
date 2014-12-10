@@ -25,8 +25,8 @@ typedef struct TOBJETO       // tipo de datos OBJETO
   CargaObjeto
 
   TIPO: TOBJETO.
-  PARµMETROS DE ENTRADA:el c¢digo del objeto a leer (cod)
-  êsta funci¢n abre y procesa el fichero de objetos hasta que encuentra
+  PARµMETROS DE ENTRADA:el codigo del objeto a leer (cod)
+  êsta funcion abre y procesa el fichero de objetos hasta que encuentra
   el objeto pedido, y lo devuelve.
 
 *********************************************/

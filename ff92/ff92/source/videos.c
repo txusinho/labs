@@ -10,16 +10,16 @@
 
 /************************************************************************
 
-                FUNCIONES DE SINCRONIZACIàN DE EVENTOS
+                FUNCIONES DE SINCRONIZACION DE EVENTOS
                               CON VIDEOS
 
-                Las funciones que se encuentran a continuaci¢n
-                se utilizan para producir retardos en las animaci¢nes,
+                Las funciones que se encuentran a continuacion
+                se utilizan para producir retardos en las animaciones,
                 y para sincronizar la salida de texto por pantalla
                 en determinados momentos.
                 Todas ellas tienen la misma estructura:
 
-                      - B£squeda del evento a sicronizar mediante la
+                      - Busqueda del evento a sicronizar mediante la
                         variable global de Allegro fli_frame
                       - Retardo
 
@@ -36,7 +36,7 @@ int StopILucha()
  if (fli_frame>121 && fli_frame<136 )
  {
   text_mode (-1);
-  textprintf (screen,font,20,180,36,"Ah¡ va!, se me ha ca¡do el arma!");
+  textprintf (screen,font,20,180,36,"Ahi va!, se me ha caido el arma!");
  }
  rest (166);
  if (keypressed()) return 1;
@@ -254,18 +254,18 @@ int StopStd ()
 
 /**********************************************************************
 
-                FUNCIONES DE REPRODUCCIàN DE
+                FUNCIONES DE REPRODUCCION DE
                           VIDEOS
 
-          Tan s¢lo cargan las m£sicas, escogen las funciones
-          de sincronizaci¢n y reproducen las animaci¢nes
+          Tan solo cargan las musicas, escogen las funciones
+          de sincronizacion y reproducen las animaciones
           indicadas.
 
 **********************************************************************/
 
 
 
-// Muestra en pantalla los dos logotipos iniciales, con sus m£sicas
+// Muestra en pantalla los dos logotipos iniciales, con sus musicas
 
 void Logos()
 {
@@ -295,14 +295,14 @@ void Logos()
 }
 
 
-// Muestra la secuencia de videos de introducci¢n
+// Muestra la secuencia de videos de introduccion
 
 void Intro()
 {
  MIDI *music;
  int (*CallBack)();
 
- set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo gr fico
+ set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo grafico
  music = load_midi ("ilucha.mid");
  play_midi (music,TRUE);
  rest (1000);
@@ -324,18 +324,18 @@ void Intro()
  play_fli ("sephkit.fli",screen,FALSE,CallBack);
  rest (4000);
  destroy_midi (music);
- set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo gr fico
+ set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo grafico
 }
 
 
-// Muestra el v¡deo que aparece cuando muere el personaje
+// Muestra el video que aparece cuando muere el personaje
 
 void Mueto ()
 {
  int (*callBack)();
 
  clear_keybuf();
- set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo gr fico
+ set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo grafico
  callBack = StopStandard;
  play_fli ("mueto.fli",screen,FALSE,callBack);
  set_gfx_mode (GFX_AUTODETECT,640,480,0,0);
@@ -353,7 +353,7 @@ void Final ()
  clear_keybuf();
  music = load_midi ("mfin.mid");
  play_midi (music,TRUE);
- set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo gr fico
+ set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo grafico
  callBack = StopEnd;
  play_fli ("final.fli",screen,FALSE,callBack);
  set_gfx_mode (GFX_AUTODETECT,640,480,0,0);
@@ -362,15 +362,15 @@ void Final ()
  return;
 }
 
-// Muestra la animaci¢n que aparece al ganar un combate.
-// Dicha animaci¢n depende de que el personaje sea uno u otro.
+// Muestra la animacion que aparece al ganar un combate.
+// Dicha animacion depende de que el personaje sea uno u otro.
 
 void BattleWin (TPERSONAJE player)
 {
  MIDI *music;
  int (*callBack)();
 
- set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo gr fico
+ set_gfx_mode (GFX_AUTODETECT,320,200,0,0); //inicializamos el modo grafico
  music = load_midi ("batwin.mid");
  play_midi (music,TRUE);
  callBack = StopStd;
@@ -378,7 +378,7 @@ void BattleWin (TPERSONAJE player)
     play_fli ("bdkwin.fli",screen,TRUE,callBack);  // mostramos bdkwin.fli
  else play_fli ("txswin.fli",screen,TRUE,callBack);// si no, Txswin.fli
  destroy_midi (music);
- set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo gr fico
+ set_gfx_mode (GFX_AUTODETECT,640,480,0,0); //inicializamos el modo grafico
 
  return;
 }

@@ -1,7 +1,7 @@
 /************************************************************************
 
- cabecera que no sabemos qu‚ es, pero ven¡a con las listas.
-Lo £nico que hace es definir unas macros.
+ cabecera que no sabemos qu‚ es, pero venia con las listas.
+Lo unico que hace es definir unas macros.
 
 *************************************************************************/
 

@@ -34,7 +34,7 @@ typedef struct       // Tipo de dato: enemigo
         Nombre: CargaMalo
         Tipo: TMALO
         Par metros de entrada: codigo
-        Descripci¢n: mediante llamadas a CargaMaloSiguiente, devuelve
+        Descripcion: mediante llamadas a CargaMaloSiguiente, devuelve
                      el enemigo del codigo solicitado.
 
 **************************************************************/

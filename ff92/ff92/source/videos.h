@@ -10,7 +10,7 @@
 
 
 /************************************************************************
-                FUNCIONES DE SINCRONIZACI‡N DE EVENTOS
+                FUNCIONES DE SINCRONIZACION DE EVENTOS
                               CON VIDEOS
 *************************************************************************/
 
@@ -34,7 +34,7 @@ int StopStd ();
 
 
 /**********************************************************************
-                FUNCIONES DE REPRODUCCI‡N DE
+                FUNCIONES DE REPRODUCCION DE
                           VIDEOS
 **********************************************************************/
 

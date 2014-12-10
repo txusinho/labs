@@ -211,8 +211,8 @@
         Nombre: RetrieveI
         Tipo: Puntero a imagen
         Par metros de entrada: puntero a nodo
-        Descripci¢n: Devuelve la direcci¢n de la imagen contenida en
-                     el nodo cuya direcci¢n es P.
+        Descripcion: Devuelve la direccion de la imagen contenida en
+                     el nodo cuya direccion es P.
         Restricciones: P debe de apuntar a un nodo que contenga un
                        apuntador a una imagen creada de tipo BITMAP.
 
@@ -221,7 +221,7 @@
 
         BITMAP *RetrieveI (Position P)
         {
-            return P->imagen;           // Devolvemos la im gen en el nodo
+            return P->imagen;           // Devolvemos la imagen en el nodo
         }
 
 /*****************************************************************
@@ -229,8 +229,8 @@
         Nombre: InsertPrimero
         Tipo: void
         Par metros de entrada: puntero a Lista, Elemento de la lista y
-                               puntero a im gen.
-        Descripci¢n: Inserta el elemento como el primero de la lista.
+                               puntero a imagen.
+        Descripcion: Inserta el elemento como el primero de la lista.
         Restricciones: La lista debe de estar inicializada.
 
 ******************************************************************/
@@ -253,9 +253,9 @@
         Nombre: CargaFicheroObjetos
         Tipo: Lista
         Par metros de entrada: nada
-        Descripci¢n: carga el contenido del fichero objetos.ots en
+        Descripcion: carga el contenido del fichero objetos.ots en
                      una lista en memoria, junto con sus respectivas
-                     im genes.
+                     imagenes.
         Restricciones: el fichero objetos.ots ha de existir y ser
                        correcto.
 
@@ -267,10 +267,10 @@
          FILE *fichObjetos;   // Fichero de objetos
          int i=1;             // Variable contador
          TOBJETO objeto;      // variable objeto
-         PALETTE pal;         // paleta gr fica (necesario)
+         PALETTE pal;         // paleta grafica (necesario)
          BITMAP *bmp;         // Apuntador a BITMAP
 
-         listaObjetos = NULL; // Inicializamos la lista como vac¡a
+         listaObjetos = NULL; // Inicializamos la lista como vacia
 
          while ((objeto = CargaObjeto (i)).codigo != 0)
          { // Mientras el objeto que pedimos exista...

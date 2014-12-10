@@ -13,7 +13,7 @@
 
   TIPO: TPERSONAJE
   PARµMETROS DE ENTRADA:un puntero al nombre del fichero fuente.
-  êsta funci¢n carga temp con el contenido del fichero especificado.
+  êsta funcion carga temp con el contenido del fichero especificado.
 ***************************************************/
 
 TPERSONAJE CargaPlayer (char *nombreFich)
@@ -22,7 +22,7 @@ TPERSONAJE CargaPlayer (char *nombreFich)
  FILE *fich;      //vble de tipo fichero.
 
  fich = fopen (nombreFich,"rb"); //Abrimos el fichero, que es de tipo binario.
- fread (&temp,sizeof(TPERSONAJE),1,fich);//recogemos en temp el valor le°do.
+ fread (&temp,sizeof(TPERSONAJE),1,fich);//recogemos en temp el valor leido.
  fclose (fich);
 
  return temp;
@@ -36,7 +36,7 @@ TPERSONAJE CargaPlayer (char *nombreFich)
   TIPO: void
   PARµMETROS DE ENTRADA: nombre del personaje que se va a grabar (aGrabar),
              nombre del fichero en el que se va a grabar (nombreFich).
-  Esta funci¢n graba en el fichero que corresponda (nombreFich) el personaje
+  Esta funcion graba en el fichero que corresponda (nombreFich) el personaje
   a grabar
 *******************************************************************/
 
