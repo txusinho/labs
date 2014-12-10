@@ -1,0 +1,7 @@
+TODO.txt
+========
+
+WIP
+===
+
+- Txus: Compile allegro for Mac OS X to be able to do a compilation of the project

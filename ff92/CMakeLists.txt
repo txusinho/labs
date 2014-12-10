@@ -178,7 +178,7 @@ set(SOURCE_FILES
     ff92/assets/img/bitmap/IMPALED.BMP
     ff92/assets/img/animations/IVICT.FLI
     ff92/assets/audio/jefe01.mid
-    ff92/leeme.ya
+    ff92/README.now
     ff92/assets/img/bitmap/LLAVEA.BMP
     ff92/assets/audio/logo1.mid
     ff92/assets/audio/logo2.mid
