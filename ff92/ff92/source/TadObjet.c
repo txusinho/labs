@@ -14,7 +14,7 @@
   CargaSiguiente
 
   TIPO: TOBJETO
-  PARµMETROS DE ENTRADA: el puntero al fichero de objetos, apuntando
+  PARAMETROS DE ENTRADA: el puntero al fichero de objetos, apuntando
   siguiente registro a leer.
   êsta funcion recoge el fichero de Objetos y devuelve
   el objeto siguiente.
@@ -40,7 +40,7 @@ static TOBJETO CargaSiguiente (FILE *fichObjetos)
   CargaObjeto
 
   TIPO: TOBJETO.
-  PARµMETROS DE ENTRADA:el codigo del objeto a leer (cod)
+  PARAMETROS DE ENTRADA:el codigo del objeto a leer (cod)
   êsta funcion abre y procesa el fichero de objetos hasta que encuentra
   el objeto pedido, y lo devuelve.
 

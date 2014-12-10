@@ -37,7 +37,7 @@ typedef struct TSALA                // tipo de datos SALA
   CargaSiguiente
 
   Funcion de tipo Tsala
-  Par metros de entrada: el puntero al fichero de salas
+  Parametros de entrada: el puntero al fichero de salas
   funcion:
   el siguiente registro del fichero de salas
 
@@ -51,11 +51,11 @@ TSALA CargaSiguiente (FILE *fichSala);
   GrabaSiguiente
 
   La funcion es de TIPO entero.
-  PARµMETROS: el fichero de salida (*.zkt) y la sala que se va a grabar.
+  PARAMETROS: el fichero de salida (*.zkt) y la sala que se va a grabar.
   Descripcion:
   Graba la sala siguiente en el archivo de salida, teniendo en cuenta las
-  consideraciones anteriores, tales como el NO para pnjïs como para combates.
-  Devuelve 0 en caso de que la operacion se realice con ‚xito
+  consideraciones anteriores, tales como el NO para pnjs como para combates.
+  Devuelve 0 en caso de que la operacion se realice con exito
 
 ***************************************************/
 

@@ -19,7 +19,7 @@
 
         Nombre: HayCombate
         Tipo: entero
-        Par metros de entrada: sala
+        Parametros de entrada: sala
         Descripcion: determina de manera aleatoria si ha de producirse un
                      combate. Devuelve cero o el codigo de un enemigo de la
                      sala.
@@ -33,7 +33,7 @@ int HayCombate (TSALA sala);
 
         Nombre: Combate
         Tipo: void
-        Par metros de entrada: sala en que se desarrolla el combate.
+        Parametros de entrada: sala en que se desarrolla el combate.
                    personaje. m, codigo del malo con el que luchar.
                    musicC, nombre del fichero con la musica para el combate.
                    doublebuffer, BITMAP.
@@ -50,7 +50,7 @@ void Combate (TSALA sala, TPERSONAJE *personaje,int m,char musicC[13],
 
         Nombre: CombateFinal
         Tipo: void
-        Par metros de entrada: personaje. m, codigo del malo con el que luchar.
+        Parametros de entrada: personaje. m, codigo del malo con el que luchar.
                    doublebuffer, BITMAP. Codigo de la pantalla actual.
         Descripcion: carga lo necesario para el combate con el enemigo final
                      de pantalla, y llama a CombateEnSi

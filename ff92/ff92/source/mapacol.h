@@ -13,7 +13,7 @@
 
         Nombre: RellenaMapa
         Tipo: void
-        Par metros de entrada: mapa de colisiones, coordenadas de inicio y
+        Parametros de entrada: mapa de colisiones, coordenadas de inicio y
                                final del espacio a rellenar del mapa y
                                codigo con el que rellenar ese espacio
         Descripcion: Modifica el mapa de colisiones, rellenando el espacio
@@ -30,7 +30,7 @@ void RellenaMapa (char mapaColisiones[640][380],int x1,int y1,int x2,int y2,
 
         Nombre: CreaMapaColisiones
         Tipo: void
-        Par metros de entrada: sala, mapa de colisiones, lista de objetos
+        Parametros de entrada: sala, mapa de colisiones, lista de objetos
         Descripcion: Crea el mapa de colisiones de la sala especificada
                      para la lista de objetos que le pasamos.
 
@@ -45,7 +45,7 @@ void CreaMapaColisiones (TSALA sala,char mapaColisiones[640][380],List objetos);
 
         Nombre: Colision
         Tipo: char
-        Par metros de entrada: mapa de colisiones, coordenadas iniciales y
+        Parametros de entrada: mapa de colisiones, coordenadas iniciales y
                                finales.
         Descripcion: Devuelve el primer codigo distinto de cero presente en
                      el recinto especificado del mapa de colisiones, o cero

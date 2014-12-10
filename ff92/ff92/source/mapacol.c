@@ -13,7 +13,7 @@
 
         Nombre: RellenaMapa
         Tipo: void
-        Par metros de entrada: mapa de colisiones, coordenadas de inicio y
+        Parametros de entrada: mapa de colisiones, coordenadas de inicio y
                                final del espacio a rellenar del mapa y
                                codigo con el que rellenar ese espacio
         Descripcion: Modifica el mapa de colisiones, rellenando el espacio
@@ -37,7 +37,7 @@ void RellenaMapa (char mapaColisiones[640][380],int x1,int y1,int x2,int y2,
 
         Nombre: RellenaPuertas
         Tipo: void
-        Par metros de entrada: array con las puertas de la sala. Mapa de
+        Parametros de entrada: array con las puertas de la sala. Mapa de
                                colisiones.
         Descripcion: actualiza el mapa de colisiones con los codigos respectivos
                      a las puertas que aparecen en la sala.
@@ -61,7 +61,7 @@ void  RellenaPuertas(int *enlaces, char mapaColisiones[640][380])
 
         Nombre: RellenaParedes
         Tipo: void
-        Par metros de entrada: array con las paredes de la sala. Mapa de
+        Parametros de entrada: array con las paredes de la sala. Mapa de
                                colisiones
         Descripcion: actualiza el mapa de colisiones con los codigos de las
                      paredes de la sala.
@@ -93,7 +93,7 @@ void  RellenaParedes(int *pared, char mapaColisiones[640][380])
 
         Nombre: RellenaObjetos
         Tipo: void
-        Par metros de entrada: codigos de los objetos. Coordenadas de los
+        Parametros de entrada: codigos de los objetos. Coordenadas de los
                                objetos, mapa de colisiones, lista de objetos
         Descripcion: actualiza el mapa de colisiones con los codigos de los
                      objetos de la sala.
@@ -130,7 +130,7 @@ void RellenaObjetos (TCODIGO *codigo,int coordenada[2][5],
 
         Nombre: RellenaPnj
         Tipo: void
-        Par metros de entrada: Coordenadas del personaje no jugador, base
+        Parametros de entrada: Coordenadas del personaje no jugador, base
                                del nombre de sus fotogramas, mapa de
                                colisiones.
         Descripcion: actualiza el mapa de colisiones en la posicion que
@@ -163,7 +163,7 @@ void RellenaPnj (int *CoordPnj,char *ImagenPnj,char mapaColisiones[640][380])
 
         Nombre: CreaMapaColisiones
         Tipo: void
-        Par metros de entrada: sala, mapa de colisiones, lista de objetos
+        Parametros de entrada: sala, mapa de colisiones, lista de objetos
         Descripcion: Crea el mapa de colisiones de la sala especificada
                      para la lista de objetos que le pasamos.
 
@@ -191,7 +191,7 @@ void CreaMapaColisiones (TSALA sala,char mapaColisiones[640][380],List objetos)
 
         Nombre: Colision
         Tipo: char
-        Par metros de entrada: mapa de colisiones, coordenadas iniciales y
+        Parametros de entrada: mapa de colisiones, coordenadas iniciales y
                                finales.
         Descripcion: Devuelve el primer codigo distinto de cero presente en
                      el recinto especificado del mapa de colisiones, o cero

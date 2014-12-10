@@ -36,7 +36,7 @@ Modulo principal
 
         Nombre: InicializaTodo
         Tipo: void
-        Par metros de entrada: ninguno
+        Parametros de entrada: ninguno
         Descripcion: Inicializa Allegro, y las rutinas necesarias
                      para procesar ciertos archivos.
 ************************************************************/
@@ -58,7 +58,7 @@ void InicializaTodo()
 
         Nombre: SeleccionPers
         Tipo: TPERSONAJE. Devuelve el personaje elegido.
-        Par metros de entrada: ninguno
+        Parametros de entrada: ninguno
         Descripcion: muestra dos imagenes de los personajes en pantalla
                      y permite escoger uno con las teclas de direccion.
 ************************************************************/
@@ -122,7 +122,7 @@ TPERSONAJE SeleccionPers ()
 
         Nombre: SeleccionaMusicas
         Tipo: void
-        Par metros de entrada: i, entero que representa el numero de la
+        Parametros de entrada: i, entero que representa el numero de la
                    pantalla. MusicG y MusicC, strings para guardar el
                    nombre de los ficheros de musica.
         Descripcion: Devuelve los nombres de los ficheros de musica segun
@@ -155,11 +155,11 @@ void SeleccionaMusicas (int i,char musicG[13], char musicC[13])
 
         Nombre: SeleccionPantallaInic
         Tipo: TLISTACUAD, devuelve una pantalla
-        Par metros de entrada: musicGame, musicCombat, strings para
+        Parametros de entrada: musicGame, musicCombat, strings para
                    guardar los nombres de los ficheros de musica.
                    x, y, apuntadores a entero. En ellos se devolver n las
                    coordenadas iniciales.
-        Descripcion: Configura los par metros de la primera pantalla, y
+        Descripcion: Configura los parametros de la primera pantalla, y
                      la devuelve.
 ************************************************************/
 
@@ -180,9 +180,9 @@ TLISTACUAD SeleccionPantallaInic (char musicGame[13], char musicCombat[13],
 
         Nombre: SeleccionACargar
         Tipo: TLISTACUAD, devuelve la pantalla cargada.
-        Par metros de entrada: player, apuntador a personaje. musicG y
+        Parametros de entrada: player, apuntador a personaje. musicG y
                    musicC, strigns. i, x, y, apuntadores a entero.
-        Descripcion: Devuelve en player musicG, musicC, x e y los par metros
+        Descripcion: Devuelve en player musicG, musicC, x e y los parametros
                      necesarios para jugar en una partida guardada.
                      El valor de vuelta es la entrada a la pantalla grabada.
 ************************************************************/
@@ -245,7 +245,7 @@ TLISTACUAD SeleccionACargar (TPERSONAJE *player,int *i,char musicG[13],
 
         Nombre: GuardaPartida
         Tipo: void
-        Par metros de entrada: player, el personaje. pantalla, la pantalla
+        Parametros de entrada: player, el personaje. pantalla, la pantalla
                    actual. i, numero de pantalla. x e y, coordenadas del
                    jugador.
         Descripcion: Seleccionamos el slot en que guardar, y grabamos en ‚l
@@ -303,8 +303,8 @@ void GuardaPartida (TPERSONAJE player, TLISTACUAD pantalla,int i,int x,int y)
 
         Nombre: CargaPantallaI
         Tipo: TLISTACUAD
-        Par metros de entrada: codigo, el numero de pantalla a cargar.
-                   musicGame, musicCombat, x, y: par metros para la nueva
+        Parametros de entrada: codigo, el numero de pantalla a cargar.
+                   musicGame, musicCombat, x, y: parametros para la nueva
                    pantalla. player: aputador al personaje.
         Descripcion:
 ************************************************************/
@@ -357,7 +357,7 @@ TLISTACUAD CargaPantallaI (int codigo, char musicGame[13], char musicCombat[13],
 
         Nombre: DibujaParedes
         Tipo: void
-        Par metros de entrada: fondo, BITMAP. pared: array con las paredes
+        Parametros de entrada: fondo, BITMAP. pared: array con las paredes
         Descripcion: dibuja las paredes especificadas en pared sobre el bitmap
 ************************************************************/
 
@@ -391,7 +391,7 @@ void DibujaParedes(BITMAP *fondo,int *pared)
 
         Nombre: DibujaPuertas
         Tipo: void
-        Par metros de entrada: fondo, BITMAP. puerta: array con las puertas
+        Parametros de entrada: fondo, BITMAP. puerta: array con las puertas
         Descripcion: dibuja las puertas especificadas en puerta sobre el bitmap
 ************************************************************/
 
@@ -416,7 +416,7 @@ void DibujaPuertas (BITMAP *fondo,int *puerta)
 
         Nombre: CargaFotPlayer
         Tipo: void
-        Par metros de entrada: base, string con la base de los fotogramas.
+        Parametros de entrada: base, string con la base de los fotogramas.
                    fot, array de apuntadores a BITMAP
         Descripcion: carga en fot las imagenes dadas por base.
 ************************************************************/
@@ -492,7 +492,7 @@ void CargaFotPlayer(char *base,BITMAP **fot)
 
         Nombre: CargaFotPnj
         Tipo: void
-        Par metros de entrada: sala en la que estamos.
+        Parametros de entrada: sala en la que estamos.
                    pnjFot, array de apuntadores a BITMAP
         Descripcion: carga en pnjFot las imagenes del PNJ de la sala (si lo
                      hubiere).
@@ -524,7 +524,7 @@ void CargaFotPnj (TSALA sala,BITMAP **pnjFot)
 
         Nombre: DibujaObjetos
         Tipo: void
-        Par metros de entrada: objetos: lista de objetos
+        Parametros de entrada: objetos: lista de objetos
                    sala: sala actual. Doble buffer.
         Descripcion: dibuja en el doble buffer los objetos de la sala.
 ************************************************************/
@@ -552,7 +552,7 @@ void DibujaObjetos (List objetos,TSALA sala,BITMAP *doublebuffer)
 
         Nombre: DibujaPnj
         Tipo: void
-        Par metros de entrada: sala, fotogramas del PNJ, doblebuffer,
+        Parametros de entrada: sala, fotogramas del PNJ, doblebuffer,
                    fotograma a dibujar
         Descripcion: dibuja el fotograma del PNJ para que si le miramos nos
                      mire.
@@ -582,10 +582,10 @@ void DibujaPnj (TSALA sala,BITMAP **pnjFot, BITMAP *doublebuffer, int i)
 
         Nombre: DestruyeTodo
         Tipo: void
-        Par metros de entrada: fondo, doblebuffer, texto, pnjFot, fot,
+        Parametros de entrada: fondo, doblebuffer, texto, pnjFot, fot,
                    music, pantalla
         Descripcion: Destruye la memoria din mica asociada a todos los
-                     par metros de entrada.
+                     parametros de entrada.
 ************************************************************/
 
 void DestruyeTodo (BITMAP *fondo,BITMAP *doublebuffer,BITMAP *texto,
@@ -613,7 +613,7 @@ void DestruyeTodo (BITMAP *fondo,BITMAP *doublebuffer,BITMAP *texto,
 
         Nombre: Rotar
         Tipo: void
-        Par metros de entrada: objetos, array de 20 enteros. i, entero
+        Parametros de entrada: objetos, array de 20 enteros. i, entero
         Descripcion: desplaza hacia arriba el array en una posicion desde
                      la siguiente a la indicada. Inserta cero al final.
 ************************************************************/
@@ -632,7 +632,7 @@ void Rotar ( int objetos[20], int i)
 
         Nombre: AbrePuerta
         Tipo: int. Devuelve 0 si no se ha abierto la puerta, 1 si lo ha hecho
-        Par metros de entrada: aAbrir, numero de puerta. sala, personaje.
+        Parametros de entrada: aAbrir, numero de puerta. sala, personaje.
         Descripcion: Si se puede, abre una deerminada puerta.
 ************************************************************/
 
@@ -663,7 +663,7 @@ int AbrePuerta (char aAbrir,TSALA *sala, TPERSONAJE *personaje)
 
         Nombre: ActualizaSalaHablar
         Tipo: void
-        Par metros de entrada: sala, conversacion, player.
+        Parametros de entrada: sala, conversacion, player.
         Descripcion: actualiza la sala al intentar hablar con el PNJ,
                      y devuelve el fichero de conversacion abierto.
 ************************************************************/
@@ -701,7 +701,7 @@ void ActualizaSalaHablar (TSALA *sala, FILE **conversacion, TPERSONAJE *player)
 
         Nombre: Hablar
         Tipo: void
-        Par metros de entrada: sala, player, doblebuffer
+        Parametros de entrada: sala, player, doblebuffer
         Descripcion: se muestra el archivo de conversacion especifico.
                      EL FICHERO HA DE SER CORRECTO.
 ************************************************************/
@@ -750,7 +750,7 @@ void Hablar (TSALA *sala, TPERSONAJE *player, BITMAP *doublebuffer)
 
         Nombre: CogerObjeto
         Tipo: void
-        Par metros de entrada: sala, player, mapacolisiones, codigo,
+        Parametros de entrada: sala, player, mapacolisiones, codigo,
                    lista de objetos.
         Descripcion: Cogemos el objeto del codigo escogido. Lo quitamos
                      del mapa de colisiones y de la sala.
@@ -794,7 +794,7 @@ void CogerObjeto (TSALA *sala,TPERSONAJE *player,char mapaColisiones[640][380],
 
         Nombre: DibujaCarac
         Tipo: void
-        Par metros de entrada: player y doublebuffer
+        Parametros de entrada: player y doublebuffer
         Descripcion: escribe las caracteristicas de player en doublebuffer
 ************************************************************/
 
@@ -820,7 +820,7 @@ void DibujaCarac ( TPERSONAJE *player, BITMAP *doublebuffer)
 
         Nombre: EscribeObjetos
         Tipo: void
-        Par metros de entrada: objetos, inventario, i, doublebuffer
+        Parametros de entrada: objetos, inventario, i, doublebuffer
         Descripcion: escribe los objetos del personaje en doublebuffer
                      y pone en blanco el seleccionado por i.
 ************************************************************/
@@ -848,7 +848,7 @@ void EscribeObjetos (List objetos,int inventario[20], int i,
 
         Nombre: UsaObjeto
         Tipo: void
-        Par metros de entrada: indice (entero), lista de objetos, player
+        Parametros de entrada: indice (entero), lista de objetos, player
         Descripcion: usa uno de los objetos de player.
 ************************************************************/
 
@@ -877,7 +877,7 @@ void UsaObjeto ( int *indice, List objetos, TPERSONAJE *player)
 
         Nombre: DibujaFondoMenu
         Tipo: void
-        Par metros de entrada: fondo, player
+        Parametros de entrada: fondo, player
         Descripcion: dibuja en fondo el dibujo correspondiente a player,
                      y las lineas divisorias.
 ************************************************************/
@@ -911,7 +911,7 @@ void DibujaFondoMenu (BITMAP *fondo, TPERSONAJE *player)
 
         Nombre: Menu
         Tipo: void
-        Par metros de entrada: player, doublebuffer, objetos
+        Parametros de entrada: player, doublebuffer, objetos
         Descripcion: muestra los atributos y objetos de player. Permite usar
                      objetos.
 ************************************************************/
@@ -959,7 +959,7 @@ void Menu (TPERSONAJE *player, BITMAP *doublebuffer, List objetos)
 
         Nombre: MueveArriba
         Tipo: void
-        Par metros de entrada: mapacolisiones, x , y , i.
+        Parametros de entrada: mapacolisiones, x , y , i.
         Descripcion: si se puede, desplazamos al jugador hacia arriba,
                      y actualizamos su fotograma.
 ************************************************************/
@@ -984,7 +984,7 @@ void MueveArriba (char mapaColisiones[640][380],int *x,int *y, int *i)
 
         Nombre: MueveAbajo
         Tipo: void
-        Par metros de entrada: mapacolisiones, x , y , i.
+        Parametros de entrada: mapacolisiones, x , y , i.
         Descripcion: si se puede, desplazamos al jugador hacia abajo,
                      y actualizamos su fotograma.
 ************************************************************/
@@ -1009,7 +1009,7 @@ void MueveAbajo (char mapaColisiones[640][380],int *x,int *y, int *i)
 
         Nombre: MueveIzquierda
         Tipo: void
-        Par metros de entrada: mapacolisiones, x , y , i.
+        Parametros de entrada: mapacolisiones, x , y , i.
         Descripcion: si se puede, desplazamos al jugador hacia la izquierda
                      y actualizamos su fotograma.
 ************************************************************/
@@ -1034,7 +1034,7 @@ void MueveIzquierda (char mapaColisiones[640][380],int *x,int *y, int *i)
 
         Nombre: MueveDerecha
         Tipo: void
-        Par metros de entrada: mapacolisiones, x , y , i.
+        Parametros de entrada: mapacolisiones, x , y , i.
         Descripcion: si se puede, desplazamos al jugador hacia la derecha
                      y actualizamos su fotograma.
 ************************************************************/
@@ -1059,7 +1059,7 @@ void MueveDerecha (char mapaColisiones[640][380],int *x,int *y, int *i)
 
         Nombre: AccionSpace
         Tipo: void
-        Par metros de entrada: coordenadas, fotograma actual, mapa de colisiones
+        Parametros de entrada: coordenadas, fotograma actual, mapa de colisiones
                    sala, player, objetos, doublebuffer, pantalla
         Descripcion: dependiendo del objeto con el que haya colision se
                      llamar  a la rutina para tratarla.
@@ -1111,7 +1111,7 @@ void AccionSpace (int *x,int *y,int *i,char mapaColisiones[640][380],
 
         Nombre: MuevePlayer
         Tipo: void
-        Par metros de entrada: coordenadas, fotograma, mapa de colisiones,
+        Parametros de entrada: coordenadas, fotograma, mapa de colisiones,
                    sala, pantalla, personaje, objetos, codigo de la sala
                    actual, doblebuffer.
         Descripcion: se ejecutar  una rutina, dependiendo de la tecla
@@ -1158,7 +1158,7 @@ void MuevePlayer (int *x,int *y,int *i,char mapaColisiones[640][380],
 
         Nombre: CambiaASalaOeste
         Tipo: void
-        Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
+        Parametros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
         Descripcion: Cambiamos, si se puede, a la sala oeste.
@@ -1195,7 +1195,7 @@ void CambiaASalaOeste (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
 
         Nombre: CambiaASalaEste
         Tipo: void
-        Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
+        Parametros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
         Descripcion: Cambiamos, si se puede, a la sala este.
@@ -1232,7 +1232,7 @@ void CambiaASalaEste (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
 
         Nombre: CambiaASalaNorte
         Tipo: void
-        Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
+        Parametros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
         Descripcion: Cambiamos, si se puede, a la sala norte.
@@ -1270,7 +1270,7 @@ void CambiaASalaNorte (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
 
         Nombre: CambiaASalaSur
         Tipo: void
-        Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
+        Parametros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
         Descripcion: Cambiamos, si se puede, a la sala sur.
@@ -1308,7 +1308,7 @@ void CambiaASalaSur (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
 
         Nombre: CargaIniciales
         Tipo: void
-        Par metros de entrada: musicG, music, doublebuffer, texto, objetos,
+        Parametros de entrada: musicG, music, doublebuffer, texto, objetos,
                    sala, mapaColisiones, fondo, personaje, fot, pnjFot
                    pantalla, pal.
         Descripcion: Carga todo lo necesario para comenzar a jugar la
@@ -1346,7 +1346,7 @@ void CargaIniciales (char musicG[13],MIDI **music,BITMAP **doublebuffer,
 
         Nombre: Si hay que cambiar
         Tipo: void
-        Par metros de entrada: fondo, fotogramas PNJ, coordenadas,
+        Parametros de entrada: fondo, fotogramas PNJ, coordenadas,
                    sala, paleta, pantalla, lista de objetos, mapa de
                    colisiones.
         Descripcion: decide si hay que cambiar a alguna sala.
@@ -1376,7 +1376,7 @@ void SiHayQueCambiar (BITMAP **fondo, BITMAP *(pnjFot[4]), int *x, int *y,
 
         Nombre: JuegoEnSi
         Tipo: int
-        Par metros de entrada: personaje, pantalla, musicG, musicC,
+        Parametros de entrada: personaje, pantalla, musicG, musicC,
                    codActual (codigo de la pantalla actual), x, y.
         Descripcion: es el motor del juego. Desarrolla toda la pantalla,
                      hasta que la terminemos, decidamos salir o el personaje
@@ -1441,7 +1441,7 @@ int JuegoEnSi (TPERSONAJE *personaje, TLISTACUAD pantalla, char musicG[13],
 
         Nombre: Muestra
         Tipo: void
-        Par metros de entrada:fich, doublebuffer, xi, yi
+        Parametros de entrada:fich, doublebuffer, xi, yi
         Descripcion: muestra el fichero de cr‚ditos, usando buffer, y con
                      coordenadas base xi yi.
 ************************************************************/
@@ -1485,7 +1485,7 @@ void Muestra (FILE *fich,BITMAP *doublebuffer,int xi, int yi)
 
         Nombre: Creditos
         Tipo: void
-        Par metros de entrada: ninguno
+        Parametros de entrada: ninguno
         Descripcion: Muestra los cr‚ditos del juego
 ************************************************************/
 
@@ -1548,7 +1548,7 @@ void Creditos ()
 
         Nombre: FinalizaTodo
         Tipo: void
-        Par metros de entrada: ninguno
+        Parametros de entrada: ninguno
         Descripcion: sale se Allegro
 ************************************************************/
 
@@ -1564,7 +1564,7 @@ void FinalizaTodo ()
 
         Nombre: MenuInicial
         Tipo: int
-        Par metros de entrada: ninguno
+        Parametros de entrada: ninguno
         Descripcion: muestra el menu inicial y nos hace escoger
                      opcion.
 ************************************************************/
@@ -1617,7 +1617,7 @@ int MenuInicial ()
 
         Nombre: main
         Tipo: int
-        Par metros de entrada: ninguno
+        Parametros de entrada: ninguno
         Descripcion: funcion principal, que controla cuando hay que
                      salir.
 ************************************************************/

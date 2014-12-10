@@ -12,7 +12,7 @@
   CargaPlayer
 
   TIPO: TPERSONAJE
-  PARµMETROS DE ENTRADA:un puntero al nombre del fichero fuente.
+  PARAMETROS DE ENTRADA:un puntero al nombre del fichero fuente.
   êsta funcion carga temp con el contenido del fichero especificado.
 ***************************************************/
 
@@ -34,7 +34,7 @@ TPERSONAJE CargaPlayer (char *nombreFich)
   GrabaPlayer
 
   TIPO: void
-  PARµMETROS DE ENTRADA: nombre del personaje que se va a grabar (aGrabar),
+  PARAMETROS DE ENTRADA: nombre del personaje que se va a grabar (aGrabar),
              nombre del fichero en el que se va a grabar (nombreFich).
   Esta funcion graba en el fichero que corresponda (nombreFich) el personaje
   a grabar

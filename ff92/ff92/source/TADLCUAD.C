@@ -20,7 +20,7 @@ typedef TNODOAUX *TLISTAAUX;
 
         Nombre: BuscaSala
         Tipo: TAPNODO
-        Par metros de entrada: cod, lista
+        Parametros de entrada: cod, lista
         Descripcion: busca en la lista el nodo con la sala de codigo cod,
                      y devuelve su direccion.
 
@@ -43,7 +43,7 @@ TAPNODO BuscaSala (int cod,TLISTAAUX lista)
 
         Nombre: DestruyeColumna
         Tipo: void
-        Par metros de entrada: listaAux
+        Parametros de entrada: listaAux
         Descripcion: destruye la lista auxiliar, sin destruir los
                      nodos con las salas que cualgan de ella.
 
@@ -64,7 +64,7 @@ void DestruyeColumna (TLISTAAUX listaAux)
 
         Nombre: CargaPantalla
         Tipo: TLISTACUAD
-        Par metros de entrada: nombreFichero
+        Parametros de entrada: nombreFichero
         Descripcion: carga la pantalla contenida en el fichero
                      nombreFichero. Se vale de una lista auxiliar,
                      y devuelve la direccion de la primera sala,
@@ -119,7 +119,7 @@ TLISTACUAD CargaPantalla (char nombreFichero[13])
 
         Nombre: MoverASala
         Tipo: TAPNODO
-        Par metros de entrada: pantalla, direc
+        Parametros de entrada: pantalla, direc
         Descripcion: devuelve la direccion del nodo seleccionado
                      por el caracter direc. Devuelve la direccion
                      actual si no hay nodo.
@@ -150,8 +150,8 @@ TAPNODO MoverASala (TLISTACUAD pantalla,char direc)
 
         Nombre: DestruyePantalla
         Tipo: void
-        Par metros de entrada: pantalla
-        Descripcion: destruye la pantalla apuntada por el par metro
+        Parametros de entrada: pantalla
+        Descripcion: destruye la pantalla apuntada por el parametro
                      de entrada.
 
 **************************************************************/
@@ -176,7 +176,7 @@ void DestruyePantalla (TLISTACUAD *pantalla)
 
         Nombre: GuardaPantallaRecursivo
         Tipo: void
-        Par metros de entrada: pantalla, fichPantalla
+        Parametros de entrada: pantalla, fichPantalla
         Descripcion: guarda la pantalla recibida en el fichero, que
                      se recibe ya abierto.
 
@@ -201,7 +201,7 @@ void GuardaPantallaRecursivo (TLISTACUAD pantalla, FILE *fichPantalla)
 
         Nombre: GuardaPantalla
         Tipo: void
-        Par metros de entrada: pantalla, nombreFichero
+        Parametros de entrada: pantalla, nombreFichero
         Descripcion: abre nombreFichero para asi poder llamar
                      a GuardaPantallaRecursivo.
 
@@ -223,7 +223,7 @@ void GuardaPantalla (TLISTACUAD pantalla, char *nombreFichero )
 
         Nombre: PonerControlACero
         Tipo: void
-        Par metros de entrada: pantalla
+        Parametros de entrada: pantalla
         Descripcion: pone a cero los campos de control de la pantalla.
 
 **************************************************************/
@@ -246,7 +246,7 @@ void PonerControlACero(TLISTACUAD pantalla)
 
         Nombre: DameSalaRef
         Tipo: TSALA
-        Par metros de entrada: pantalla
+        Parametros de entrada: pantalla
         Descripcion: devuelve la sala referenciada por pantalla
 
 **************************************************************/
@@ -261,7 +261,7 @@ TSALA DameSalaRef (TLISTACUAD pantalla)
 
         Nombre: ActualizaSala
         Tipo: void
-        Par metros de entrada: sala, pantalla
+        Parametros de entrada: sala, pantalla
         Descripcion: actualiza la sala del nodo de entrada a la
                      pantalla, con la sala actual.
 

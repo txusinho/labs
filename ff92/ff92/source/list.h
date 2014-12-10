@@ -70,7 +70,7 @@
 
         Nombre: RetrieveI
         Tipo: Puntero a imagen
-        Par metros de entrada: puntero a nodo
+        Parametros de entrada: puntero a nodo
         Descripcion: Devuelve la direccion de la imagen contenida en
                      el nodo cuya direccion es P.
         Restricciones: P debe de apuntar a un nodo que contenga un
@@ -85,7 +85,7 @@
 
         Nombre: CargaFicheroObjetos
         Tipo: Lista
-        Par metros de entrada: nada
+        Parametros de entrada: nada
         Descripcion: carga el contenido del fichero objetos.ots en
                      una lista en memoria, junto con sus respectivas
                      imagenes.
