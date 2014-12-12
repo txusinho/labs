@@ -12,5 +12,5 @@ Current projects
 
 License
 =======
-WTFPL v2
+GPL v3
 
